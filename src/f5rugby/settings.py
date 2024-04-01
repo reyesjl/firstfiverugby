@@ -33,7 +33,7 @@ if ENVIRONMENT == 'dev':
 elif ENVIRONMENT == 'prod':
     # Production settings
     DEBUG = False
-    ALLOWED_HOSTS = ['198.58.111.53']
+    ALLOWED_HOSTS = ['f5rugby.com', 'www.f5rugby.com', '198.58.111.53']
 
     # Database configuration for production
     DATABASES = {
