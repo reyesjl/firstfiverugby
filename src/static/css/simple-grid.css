@@ -171,9 +171,17 @@ p {
   display: none;
 }
 
+.sm-break {
+  display: none;  
+}
+
 @media only screen and (min-width: 33.75em) {  /* 540px */
   .container {
     width: 80%;
+  }
+
+  .sm-break {
+    display: block;
   }
 }
 
