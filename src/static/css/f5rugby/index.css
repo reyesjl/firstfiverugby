@@ -1,0 +1,43 @@
+.hero-wrapper {
+    background-color: #772929;
+    background-image: linear-gradient(to bottom left, rgba(119, 41, 41, 0.16) 0, rgba(119, 41, 41, 0.16) 49.9%, transparent 50%), linear-gradient(to bottom right, rgba(228, 228, 228, 0.5) 0, rgba(228, 228, 228, 0.5) 49.9%, transparent 50%), linear-gradient(to top left, white 0%, white 49.3%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0) 100%), linear-gradient(-89deg, #e92020 0%, #772929 42%, #2c0000 94%);
+    background-blend-mode: multiply, multiply, normal, normal;
+    background-position: top right, top left, right bottom -1px, left top;
+    background-repeat: no-repeat;
+    background-size: 74% 99.83%, 68% 91%, 103.8% 20.26%, 100% 99.8%;
+}
+
+.hero {
+    color: white;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.hero-title {
+    color: white;
+    margin: 0;
+    font-size: 2rem;
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    color: white;
+}
+
+.strip-notice {
+    margin-top: 20px;
+}
+
+.notification {
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-left: 4px solid #24598f;
+    padding: 0 10px;
+}
+
+.notification-title {
+    color: darkred;
+    font-weight: 400;
+}
+

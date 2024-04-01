@@ -1,0 +1,20 @@
+.nav-wrapper {
+    background: rgba(0, 0, 0, 0.893);
+}
+
+.navlist {
+    display: flex;
+    list-style-type: none;
+    margin: 0 auto;
+    padding: 0;
+    height: 40px;
+    align-items: center;
+}
+
+.navlink {
+    font-size: 16px;
+    text-decoration: none;
+    color: white;
+    text-transform: capitalize;
+    margin-right: 15px;
+}

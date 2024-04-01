@@ -1,0 +1,42 @@
+<!-- templates/f5rugby/base.html -->
+
+<!-- load the static tag -->
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}F5Rugby{% endblock %}</title>
+    <meta name="description" content="{% block description %}{% endblock %}">
+    <!-- Font Links -->
+    
+
+    <!-- Style Links -->
+    <link rel="stylesheet" href="{% static 'css/reset.css' %}">
+    <link rel="stylesheet" href="{% static 'css/simple-grid.css' %}">
+    <link rel="stylesheet" href="{% static 'css/components/navigation.css' %}">
+    <link rel="stylesheet" href="{% static 'css/components/footer.css' %}">
+    <!-- Custom CSS tags -->
+    {% block css %}
+    {% endblock %}
+</head>
+<body>
+    <header>
+    <!-- Include the navigation component -->
+    {% include 'components/navigation.html' %}
+    </header>
+
+    <main>
+    {% block content %}
+    {% endblock %}
+    </main>
+
+    <!-- Include the footer component -->
+    {% include 'components/footer.html' %}
+
+    <!-- Custom JavaScript tags -->
+    {% block js %}
+    {% endblock %}
+</body>
+</html>

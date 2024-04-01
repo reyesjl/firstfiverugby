@@ -1,0 +1,115 @@
+<!-- templates/f5rugby/landing.html -->
+
+{% extends 'f5rugby/base.html' %}
+
+<!-- load the static tag -->
+{% load static %}
+{% block css %}
+    <link rel="stylesheet" href="{% static 'css/f5rugby/index.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+{% endblock %}
+
+{% block title %}Welcome to F5Rugby{% endblock %}
+{% block description %}Join the rugby community at First Five Rugby ( F5Rugby ) - your ultimate destination for all things rugby. Play rugby at local camps, participate in international tournaments, and get assistance from our recruiters. Access free resources including fitness plans and nutrition guides to optimize your training and performance. Explore our team services offering recruiting assistance and team tours. Shop our collection of team kits and customize apparel for games, travel, and honor caps. Start your rugby journey with F5Rugby today!{% endblock %}
+
+{% block content %}
+<div class="hero-wrapper">
+    <div class="hero container">
+        <div class="row">
+            <div class="col-8">
+                <h1 class="hero-title ubuntu-regular">Welcome to the ultimate rugby platform.</h1>
+                <p class="hero-subtitle ubuntu-light">Join camps, discover free resources, seek recruitment aid, personalize team gear.</p>
+                <p><a class="button primary" href="">View Camps</a></p>
+                <p><a class="link light" href="">Learn more about our free resources ></a></p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="strip-notice">
+    <div class="container">
+        <div class="notification">
+            <p class="notification-title">Latest update: Sunday, March 31st 01:30am</p>
+            <p><i class="fa fa-exclamation-circle" aria-hidden="true"></i> This site is being updated weekly. Check back soon for more updates.</p>
+        </div>
+    </div>
+</div>
+<div class="section-strip camps-wrapper">
+    <div class="container">
+        <hr>
+        <div class="row">
+            <div class="col-7">
+                <h1 class="section-title ubuntu-light">Rugby camps for modern players</h1>
+                <p>Get coached by <a class="link dark" href="https://twitter.com/andyskehan?lang=en">Andy Skehan</a>, build player connections, and enhance your game.</p>
+                <p><a class="button primary" href="">Secure a Spot</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="section-strip blog-wrapper">
+    <div class="container">
+        <hr>
+        <div class="row">
+            <div class="col-7">
+                <h2 class="section-title ubuntu-regular">Latest news from our blog ></h2>
+                <p>We're searching for passionate rugby writers. Contact us.</p>
+            </div>
+        </div>
+        <div class="row">
+        </div>
+    </div>
+</div>
+<div class="section-strip section-strip-light tours-wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="col-7">
+                <h1 class="section-title ubuntu-light">Ireland team tours</h1>
+                <p class="subtitle">Your cities. Local teams. Expert guides. Custom tour, from land to sea.</p>
+                <p>Over 50% of teams prefer F5 Rugby.</p>
+                <p>That's why F5 Rugby supports the biggest, exclusive and most successful rugby tours.</p>
+                <ul class="inline-list">
+                    <li><a class="link dark" href="#">Let's chat free quotes ></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="section-strip health-wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="col-7">
+                <h1 class="section-title ubuntu-light">Open source health</h1>
+                <p class="subtitle">First Five is more than just Rugby. <a class="link dark" href="#">Health and fitness</a> for free.</p>
+                <p>Access fitness & nutrition. Meet with an expert, from customizing your meals, to crafting a gym plan that works for you. Backed by certified personel - we deliver results.</p>
+
+                <ul class="section-strip inline-list">
+                    <li class="inline-list-item"><i class="fa-regular fa-circle-check"></i> Free resources by experts crafted directly from user feedback.</li>
+                    <li class="inline-list-item"><i class="fa-regular fa-circle-check"></i> <a class="link dark" href="#">Upload your current</a> diet or gym plan for an evaluation.</li>
+                    <li class="inline-list-item"><i class="fa-regular fa-circle-check"></i> Schedule a <a class="link dark" href="#">1-on-1 with an expert</a> to help reach your goals.</li>
+                </ul>
+
+                <p><a class="link dark" href="#">Get stronger and feel better with us ></a></p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="section-strip section-strip-light store-wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="col-7">
+                <h1 class="section-title ubuntu-light">Refreshing rugby apparel</h1>
+                <p class="subtitle">The only Rugby brand creating community inspired clothing, anywhere.</p>
+                <p>Rethink what's possible for rugby and the fans.</p>
+                <p>We collaborate with local players and clubs to draw from rugby culture. The end product is something special and unique to the game.</p>
+
+                <ul class="section-strip inline-list">
+                    <li class="inline-list-item"><i class="fa-regular fa-circle-check"></i> Companies like Canterbury help us <a class="link dark" href="">create custom team gear.</a></li>
+                    <li class="inline-list-item"><i class="fa-regular fa-circle-check"></i> Local artists help design new upcoming releases.</li>
+                    <li class="inline-list-item"><i class="fa-regular fa-circle-check"></i> MLR players tell their stories and speak on why rugby is special.</li>
+                </ul>
+
+                <p><a class="link dark" href="#">Submit person of interest ></a></p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
