@@ -21,14 +21,33 @@ if ENVIRONMENT == 'dev':
     # Development settings
     DEBUG = True
     ALLOWED_HOSTS = ['localhost', '127.0.0.1']
+    
+    # Database configuration for development
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': BASE_DIR / 'db.sqlite3',
+        }
+    }
 
 elif ENVIRONMENT == 'prod':
     # Production settings
     DEBUG = False
     ALLOWED_HOSTS = ['45.56.96.173']
 
-# Application definition
+    # Database configuration for production
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql',
+            'NAME': os.getenv('DB_NAME'),
+            'USER': os.getenv('DB_USER'),
+            'PASSWORD': os.getenv('DB_PASSWORD'),
+            'HOST': os.getenv('DB_HOST'),
+            'PORT': os.getenv('DB_PORT'),
+        }
+    }
 
+# Application definition
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
