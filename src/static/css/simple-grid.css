@@ -172,12 +172,16 @@ p {
 }
 
 .sm-break {
-  display: none;  
+  display: block;  
 }
 
 @media only screen and (min-width: 33.75em) {  /* 540px */
   .container {
     width: 80%;
+  }
+
+  .sm-break {
+    display: none;
   }
 }
 
@@ -231,10 +235,6 @@ p {
   }
 
   .hidden-sm {
-    display: block;
-  }
-
-  .sm-break {
     display: block;
   }
 }
