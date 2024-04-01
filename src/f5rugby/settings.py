@@ -47,6 +47,12 @@ elif ENVIRONMENT == 'prod':
         }
     }
 
+    # Security and Cookies
+    SECURE_HSTS_SECONDS = int(os.getenv('SECURE_HSTS_SECONDS', 0))
+    SECURE_SSL_REDIRECT = os.getenv('SECURE_SSL_REDIRECT', '').lower() == 'true'
+    SESSION_COOKIE_SECURE = os.getenv('SESSION_COOKIE_SECURE', '').lower() == 'true'
+    CSRF_COOKIE_SECURE = os.getenv('CSRF_COOKIE_SECURE', '').lower() == 'true'
+
 # Application definition
 INSTALLED_APPS = [
     'django.contrib.admin',
