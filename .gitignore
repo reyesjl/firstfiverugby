@@ -1,0 +1,20 @@
+*.pyc
+__pycache__/
+*.pyo
+
+# Environment files
+.env
+
+# Virtual environment
+venv/
+env/
+
+# SQLite database file
+db.sqlite3
+
+# Media and static files
+staticfiles/
+*.sh
+
+# MacOS system files
+.DS_Store
