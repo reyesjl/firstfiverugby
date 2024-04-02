@@ -1,4 +1,4 @@
-.hero-wrapper {
+.red-background {
     background-color: #772929;
     background-image: linear-gradient(to bottom left, rgba(119, 41, 41, 0.16) 0, rgba(119, 41, 41, 0.16) 49.9%, transparent 50%), linear-gradient(to bottom right, rgba(228, 228, 228, 0.5) 0, rgba(228, 228, 228, 0.5) 49.9%, transparent 50%), linear-gradient(to top left, white 0%, white 49.3%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0) 100%), linear-gradient(-89deg, #e92020 0%, #772929 42%, #2c0000 94%);
     background-blend-mode: multiply, multiply, normal, normal;
@@ -7,12 +7,22 @@
     background-size: 74% 99.83%, 68% 91%, 103.8% 20.26%, 100% 99.8%;
 }
 
+.red-right-background {
+    background-blend-mode: multiply, multiply, normal;
+    background-image: linear-gradient(150deg, rgba(228, 228, 228, 0.54) 0%, rgba(228, 228, 228, 0.54) 54.9%, rgba(228, 228, 228, 0) 55%, rgba(228, 228, 228, 0) 100%), linear-gradient(to bottom left, rgba(216, 216, 216, 0.54) 0%, rgba(216, 216, 216, 0.54) 49.9%, rgba(216, 216, 216, 0) 50%, rgba(216, 216, 216, 0) 100%), linear-gradient(-89deg, #e92020 0%, #772929 42%, #2c0000 94%);
+    background-position: bottom left, bottom 0 right, 0% 0%;
+    background-repeat: no-repeat;
+    background-size: 100% 100%, 60% 100%, auto;
+}
+
+.hero-wrapper {
+    padding: 4rem 0;
+}
+
 .hero {
     color: white;
-    height: 500px;
     display: flex;
     align-items: center;
-    padding: 20px 0;
 }
 
 .hero-title {

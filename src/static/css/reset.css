@@ -4,6 +4,23 @@ body {
   margin: 0;
 }
 
+.no-margin-top {
+  margin-top: 0;
+}
+
+.no-margin-bottom {
+  margin-bottom: 0;
+}
+
+/* Text colors */
+.text-white {
+  color: white;
+}
+
+.text-black {
+  color: black;
+}
+
 /* Lists */
 .inline-list {
   margin: 0;
@@ -79,6 +96,16 @@ body {
 
 .link.dark {
   color: darkred;
+}
+
+.link-soft {
+  color: #000;
+  text-decoration: none;
+  font-weight: 450;
+}
+
+.link-soft:hover {
+  text-decoration: underline;
 }
 
 /* Fonts*/

@@ -13,13 +13,13 @@
 {% block description %}Join the rugby community at First Five Rugby ( F5Rugby ) - your ultimate destination for all things rugby. Play rugby at local camps, participate in international tournaments, and get assistance from our recruiters. Access free resources including fitness plans and nutrition guides to optimize your training and performance. Explore our team services offering recruiting assistance and team tours. Shop our collection of team kits and customize apparel for games, travel, and honor caps. Start your rugby journey with F5Rugby today!{% endblock %}
 
 {% block content %}
-<div class="hero-wrapper">
+<div class="hero-wrapper red-background">
     <div class="hero container">
         <div class="row">
             <div class="col-8">
                 <h1 class="hero-title ubuntu-regular">Welcome to the ultimate rugby platform.</h1>
                 <p class="hero-subtitle ubuntu-light">Join camps, discover free resources, seek recruitment aid, personalize team gear.</p>
-                <p><a class="button primary" href="">View Camps</a></p>
+                <p><a class="button primary" href="{% url 'camps'%}">View Camps</a></p>
                 <p><a class="link light" href="">Learn more about our free resources ></a></p>
             </div>
         </div>
@@ -40,7 +40,7 @@
             <div class="col-7">
                 <h1 class="section-title ubuntu-light">Rugby camps for modern players</h1>
                 <p>Get coached by <a class="link dark" href="https://twitter.com/andyskehan?lang=en">Andy Skehan</a>, build player connections, and enhance your game.</p>
-                <p><a class="button primary" href="">Secure a Spot</a></p>
+                <p><a class="button primary" href="{% url 'camps'%}">Secure a Spot</a></p>
             </div>
         </div>
     </div>
