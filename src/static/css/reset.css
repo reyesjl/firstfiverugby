@@ -108,6 +108,17 @@ body {
   text-decoration: underline;
 }
 
+.underlined {
+  text-decoration: underline;
+}
+
+.link.deactivated {
+  color: #6c6c6c; /* Change the color to a grayish tone */
+  text-decoration: none; /* Remove underline */
+  pointer-events: none; /* Disable click events */
+  cursor: default; /* Change cursor to default */
+}
+
 /* Fonts*/
 .ubuntu-light {
   font-family: "Ubuntu", sans-serif;

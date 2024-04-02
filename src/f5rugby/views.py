@@ -9,3 +9,6 @@ def index(request):
 
 def camps(request):
     return render(request, 'f5rugby/camps.html', context={})
+
+def health(request):
+    return render(request, 'f5rugby/health.html', context={})
