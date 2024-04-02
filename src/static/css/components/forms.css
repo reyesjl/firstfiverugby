@@ -1,0 +1,43 @@
+.form-wrapper {
+    margin: 1.5rem 0;
+}
+
+.form-container {
+    margin: 0 auto;
+}
+
+form {
+    padding: 10px;
+    box-shadow: 0 1px 1px 0 rgba(0,0,0,.15), 0 2px 2px -1px rgba(0,0,0,.15), 0 0 3px 0 rgba(0,0,0,.2);
+}
+
+form p {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+form p label {
+    font-weight: 550;
+    font-size: 14px;
+    margin-bottom: 6px;
+}
+
+input {
+    height: 20px;
+}
+
+select {
+    height: 25px;
+}
+
+.helptext {
+    font-size: 12px;
+    color: #666;
+    margin-top: 5px;
+}
+
+button.button.primary {
+    margin: 0;
+    margin-top: 15px;
+}
