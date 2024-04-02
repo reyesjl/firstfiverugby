@@ -2,9 +2,10 @@
 # author: jose
 # date: April 02, 2024
 
-from django.http import HttpResponse
-from django.shortcuts import render
 import subprocess
+from django.shortcuts import render
+from django.http import HttpResponse
+from django.views.decorators.csrf import csrf_exempt
 
 def index(request):
     return render(request, 'f5rugby/index.html', context={})
@@ -15,6 +16,7 @@ def camps(request):
 def health(request):
     return render(request, 'f5rugby/health.html', context={})
 
+@csrf_exempt
 def webhook_handler(request):
     if request.method == 'POST':
         # Execute git pull
