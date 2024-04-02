@@ -16,7 +16,7 @@ def index(request):
     return render(request, 'f5rugby/index.html', context={})
 
 def camps(request):
-    all_camps = Camp.objects.all()
+    all_camps = Camp.objects.order_by('start_date')
     context = {'camps': all_camps}
 
     return render(request, 'f5rugby/camps.html', context)
