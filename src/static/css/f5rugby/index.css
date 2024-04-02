@@ -15,6 +15,22 @@
     background-size: 100% 100%, 60% 100%, auto;
 }
 
+.blue-right-background {
+    background-blend-mode: multiply, multiply, normal;
+    background-image: linear-gradient(150deg, rgba(228, 228, 228, 0.54) 0%, rgba(228, 228, 228, 0.54) 54.9%, rgba(228, 228, 228, 0) 55%, rgba(228, 228, 228, 0) 100%), linear-gradient(to bottom left, rgba(216, 216, 216, 0.54) 0%, rgba(216, 216, 216, 0.54) 49.9%, rgba(216, 216, 216, 0) 50%, rgba(216, 216, 216, 0) 100%), linear-gradient(-89deg, #202de9 0%, #292e77 42%, #00002c 94%);
+    background-position: bottom left, bottom 0 right, 0% 0%;
+    background-repeat: no-repeat;
+    background-size: 100% 100%, 60% 100%, auto;
+}
+
+.green-right-background {
+    background-blend-mode: multiply, multiply, normal;
+    background-image: linear-gradient(150deg, rgba(228, 228, 228, 0.54) 0%, rgba(228, 228, 228, 0.54) 54.9%, rgba(228, 228, 228, 0) 55%, rgba(228, 228, 228, 0) 100%), linear-gradient(to bottom left, rgba(216, 216, 216, 0.54) 0%, rgba(216, 216, 216, 0.54) 49.9%, rgba(216, 216, 216, 0) 50%, rgba(216, 216, 216, 0) 100%), linear-gradient(-89deg, #3ee920 0%, #29772c 42%, #072c00 94%);
+    background-position: bottom left, bottom 0 right, 0% 0%;
+    background-repeat: no-repeat;
+    background-size: 100% 100%, 60% 100%, auto;
+}
+
 .hero-wrapper {
     padding: 4rem 0;
 }
