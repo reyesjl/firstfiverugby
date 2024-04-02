@@ -7,6 +7,7 @@ import subprocess
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.views.decorators.csrf import csrf_exempt
+from camp.models import Camp
 
 # Configure logging
 logger = logging.getLogger(__name__)
@@ -15,7 +16,10 @@ def index(request):
     return render(request, 'f5rugby/index.html', context={})
 
 def camps(request):
-    return render(request, 'f5rugby/camps.html', context={})
+    all_camps = Camp.objects.all()
+    context = {'camps': all_camps}
+
+    return render(request, 'f5rugby/camps.html', context)
 
 def health(request):
     return render(request, 'f5rugby/health.html', context={})

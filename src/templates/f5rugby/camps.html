@@ -28,34 +28,37 @@
 <div class="section-strip camps-wrapper">
     <div class="container">
         <div class="row">
+            {% for camp in all_camps %}
             <div class="col-4">
                 <div class="card-post">
                     <header class="card-header">
-                        <h5 class="muted-heading">Camp, Skills, IQ</h5>
+                        <h5 class="muted-heading">{{ camp.tags }}</h5>
                     </header>
                     <div class="card-content">
-                        <h3 class="no-margin-top no-margin-bottom"><a class="link-soft underlined" href="">Philadelphia</a></h3>
-                        <p>Enhance your rugby IQ, connect with players, receive elite coaching, and snag free gear.</p>
+                        <h3 class="no-margin-top no-margin-bottom"><a class="link-soft underlined" href="">{{ camp.title }}</a></h3>
+                        <p>{{ camp.description }}</p>
                     </div>
                     <div class="card-footer">
-                        <p class="no-margin-bottom no-margin-top">Date: July 19-21</p>
+                        <p class="no-margin-bottom no-margin-top">Date: {{ camp.start_date|date:"F j" }} - {{ camp.end_date|date:"j" }}</p>
                     </div>
                 </div>
             </div>
+            {% empy %}
             <div class="col-4">
                 <div class="card-post">
                     <header class="card-header">
-                        <h5 class="muted-heading">Camp, Skills, IQ</h5>
+                        <h5 class="muted-heading">Empty</h5>
                     </header>
                     <div class="card-content">
-                        <h3 class="no-margin-top no-margin-bottom"><a class="link-soft underlined" href="">Baltimore</a></h3>
-                        <p>Enhance your rugby IQ, connect with players, receive elite coaching, and snag free gear.</p>
+                        <h3 class="no-margin-top no-margin-bottom"><a class="link-soft underlined" href="">No Camps.</a></h3>
+                        <p>Come back soon, no camps have been added yet.</p>
                     </div>
                     <div class="card-footer">
-                        <p class="no-margin-bottom no-margin-top">Date: July 23-25</p>
+                        <p class="no-margin-bottom no-margin-top">Coming soon.</p>
                     </div>
                 </div>
             </div>
+            {% endfor %}
         </div>
     </div>
 </div>
