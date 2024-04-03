@@ -13,8 +13,8 @@ def register_for_camp(request):
         form = CampRegistrationForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
-            # Redirect to a success page or do something else
-            return redirect('camps:index')
+            # Redirect to payment page
+            return redirect('https://buy.stripe.com/8wM14TbqH4kSfKw7su')
     else:
         form = CampRegistrationForm()
     
