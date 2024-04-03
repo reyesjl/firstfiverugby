@@ -1,12 +1,15 @@
 from django import forms
-from .models import Camp, CampRegistration
+from .models import Camp, CampRegistration, CoachCampRegistration
+
+from django import forms
+from .models import Camp, CampRegistration, CoachCampRegistration
 
 class CampRegistrationForm(forms.ModelForm):
     camp = forms.ModelChoiceField(queryset=Camp.objects.all(), label='Camp', help_text='Select the camp you want to register for')
 
     class Meta:
         model = CampRegistration
-        exclude = ('registration_date',)  # Exclude registration_date field from form
+        fields = ['camp', 'player_first_name', 'player_last_name', 'player_birthday', 'player_club', 'player_position', 'emergency_contact_first_name', 'emergency_contact_last_name', 'emergency_contact_email', 'emergency_contact_phone', 'photo_release_form', 'liability_waiver']
         labels = {
             'player_first_name': 'Player First Name',
             'player_last_name': 'Player Last Name',
@@ -35,4 +38,25 @@ class CampRegistrationForm(forms.ModelForm):
         }
         widgets = {
             'player_birthday': forms.DateInput(attrs={'type': 'date'}),
+        }
+
+class CoachCampRegistrationForm(forms.ModelForm):
+    camp = forms.ModelChoiceField(queryset=Camp.objects.all(), label='Camp', help_text='Select the camp you want to register for')
+
+    class Meta:
+        model = CoachCampRegistration
+        fields = ['camp', 'coach_first_name', 'coach_last_name', 'coach_email', 'coach_phone', 'coach_club']
+        labels = {
+            'coach_first_name': 'First Name',
+            'coach_last_name': 'Last Name',
+            'coach_email': 'Email',
+            'coach_phone': 'Phone Number',
+            'coach_club': 'Club',
+        }
+        help_texts = {
+            'coach_first_name': 'Enter your first name.',
+            'coach_last_name': 'Enter your last name.',
+            'coach_email': 'Enter your email address.',
+            'coach_phone': 'Enter your phone number.',
+            'coach_club': 'Enter the name of your club.',
         }

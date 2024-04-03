@@ -28,3 +28,15 @@ class CampRegistration(models.Model):
 
     def __str__(self):
         return f"{self.player_first_name} {self.player_last_name} - {self.camp.title}"
+    
+class CoachCampRegistration(models.Model):
+    camp = models.ForeignKey(Camp, on_delete=models.CASCADE)
+    coach_first_name = models.CharField(max_length=100)
+    coach_last_name = models.CharField(max_length=100)
+    coach_email = models.EmailField()
+    coach_phone = models.CharField(max_length=20)
+    coach_club = models.CharField(max_length=100)
+    registration_date = models.DateTimeField(default=timezone.now)
+
+    def __str__(self):
+        return f"{self.coach_first_name} {self.coach_last_name} - {self.camp.title}"
