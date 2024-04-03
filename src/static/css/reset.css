@@ -49,6 +49,21 @@ body {
   margin: 0;
 }
 
+.section-image-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.section-image {
+  padding-top: 3rem;
+}
+
+.section-image img {
+  width: 100%;
+}
+
 .subtitle {
   font-size: 22px;
 }
@@ -166,4 +181,10 @@ body {
   font-family: "Ubuntu", sans-serif;
   font-weight: 700;
   font-style: italic;
+}
+
+@media only screen and (max-width: 600px) { 
+  .section-image {
+    padding-top: 0;
+  }
 }

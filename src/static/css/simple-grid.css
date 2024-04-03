@@ -171,6 +171,10 @@ p {
   display: none;
 }
 
+.hidden-lg {
+  display: block;
+}
+
 .sm-break {
   display: block;  
 }
@@ -236,6 +240,10 @@ p {
 
   .hidden-sm {
     display: block;
+  }
+
+  .hidden-lg {
+    display: none;
   }
 }
 

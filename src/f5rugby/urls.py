@@ -9,6 +9,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index, name='index'),
     path('camps/', include('camp.urls')),
-    path('health/', views.health, name='health'),
+    path('health/', include('health.urls')),
     path('deploy-webhook/', views.webhook_handler, name='deploy_webhook'),
 ]

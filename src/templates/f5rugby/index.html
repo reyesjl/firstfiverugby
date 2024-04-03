@@ -20,7 +20,7 @@
                 <h1 class="hero-title ubuntu-regular">Welcome to the ultimate rugby platform.</h1>
                 <p class="hero-subtitle ubuntu-light">Join camps, discover free resources, seek recruitment aid, personalize team gear.</p>
                 <p><a class="button primary" href="{% url 'camps:index' %}">View Camps</a></p>
-                <p><a class="link light" href="{% url 'health' %}">Learn more about our free resources ></a></p>
+                <p><a class="link light" href="{% url 'health:index' %}">Learn more about our free resources ></a></p>
             </div>
         </div>
     </div>
@@ -85,18 +85,33 @@
 <div class="section-strip health-wrapper">
     <div class="container">
         <div class="row">
+            <div class="col-5 hidden-lg">
+                <div class="section-image-wrapper">
+                    <div class="section-image">
+                        <img src="{% static 'images/f5rugby/fitness.png' %}">
+                    </div>
+                </div>
+            </div>
+
             <div class="col-7">
                 <h1 class="section-title ubuntu-light">Open source health</h1>
-                <p class="subtitle">First Five is more than just Rugby. <a class="link dark" href="{% url 'health' %}">Health and fitness</a> for free.</p>
+                <p class="subtitle">First Five is more than just Rugby. <a class="link dark" href="{% url 'health:index' %}">Health and fitness</a> for free.</p>
                 <p>Access fitness & nutrition. Meet with an expert, from customizing your meals, to crafting a gym plan that works for you. Backed by certified personel - we deliver results.</p>
 
                 <ul class="section-strip inline-list">
                     <li class="inline-list-item"><i class="fa-regular fa-circle-check"></i> Free resources by experts crafted directly from user feedback.</li>
-                    <li class="inline-list-item"><i class="fa-regular fa-circle-check"></i> <a class="link dark" href="{% url 'health' %}">Upload your current</a> diet or gym plan for an evaluation.</li>
-                    <li class="inline-list-item"><i class="fa-regular fa-circle-check"></i> Schedule a <a class="link dark" href="{% url 'health' %}">1-on-1 with an expert</a> to help reach your goals.</li>
+                    <li class="inline-list-item"><i class="fa-regular fa-circle-check"></i> <a class="link dark" href="{% url 'health:index' %}">Upload your current</a> diet or gym plan for an evaluation.</li>
+                    <li class="inline-list-item"><i class="fa-regular fa-circle-check"></i> Schedule a <a class="link dark" href="{% url 'health:index' %}">1-on-1 with an expert</a> to help reach your goals.</li>
                 </ul>
 
-                <p><a class="link dark" href="{% url 'health' %}">Get stronger and feel better with us ></a></p>
+                <p><a class="link dark" href="{% url 'health:index' %}">Get stronger and feel better with us ></a></p>
+            </div>
+            <div class="col-5 hidden-sm">
+                <div class="section-image-wrapper">
+                    <div class="section-image">
+                        <img src="{% static 'images/f5rugby/fitness.png' %}">
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -104,6 +119,13 @@
 <div class="section-strip section-strip-light store-wrapper">
     <div class="container">
         <div class="row">
+            <div class="col-5">
+                <div class="section-image-wrapper">
+                    <div class="section-image">
+                        <img src="{% static 'images/f5rugby/custom-apparel.png' %}">
+                    </div>
+                </div>
+            </div>
             <div class="col-7">
                 <h1 class="section-title ubuntu-light">Refreshing rugby apparel</h1>
                 <p class="subtitle">The only Rugby brand creating community inspired clothing, anywhere.</p>
@@ -111,7 +133,7 @@
                 <p>We collaborate with local players and clubs to draw from rugby culture. The end product is something special and unique to the game.</p>
 
                 <ul class="section-strip inline-list">
-                    <li class="inline-list-item"><i class="fa-regular fa-circle-check"></i> Companies like Canterbury help us <a class="link dark deactivated" href="">create custom team gear.</a></li>
+                    <li class="inline-list-item"><i class="fa-regular fa-circle-check"></i> Create your own <a class="link dark deactivated" href="">custom team gear</a> with Canterbury today.</li>
                     <li class="inline-list-item"><i class="fa-regular fa-circle-check"></i> Local artists help design new upcoming releases.</li>
                     <li class="inline-list-item"><i class="fa-regular fa-circle-check"></i> MLR players tell their stories and speak on why rugby is special.</li>
                 </ul>
