@@ -70,3 +70,10 @@
 .logo-section {
     padding: 1rem 0;
 }
+
+@media only screen and (max-width: 600px) {
+    .logo-item {
+        height: 64px;
+    }
+}
+
