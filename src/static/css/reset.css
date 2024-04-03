@@ -68,6 +68,10 @@ body {
   font-size: 22px;
 }
 
+.height-full {
+  height: 80vh;
+}
+
 /* Buttons */
 .button {
   border-style: solid;

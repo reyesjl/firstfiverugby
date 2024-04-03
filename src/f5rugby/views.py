@@ -24,6 +24,9 @@ def camps(request):
 def health(request):
     return render(request, 'f5rugby/health.html', context={})
 
+def success_page(request):
+    return render(request, 'f5rugby/success_page.html')
+
 @csrf_exempt
 def webhook_handler(request):
     if request.method == 'POST':
