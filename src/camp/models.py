@@ -22,8 +22,8 @@ class CampRegistration(models.Model):
     emergency_contact_last_name = models.CharField(max_length=100)
     emergency_contact_email = models.EmailField()
     emergency_contact_phone = models.CharField(max_length=20)
-    photo_release_form = models.FileField(upload_to='photo_release_forms/')
-    liability_waiver = models.FileField(upload_to='liability_waivers/')
+    photo_release_form = models.FileField(upload_to='camp_files/photo_release_forms/')
+    liability_waiver = models.FileField(upload_to='camp_files/liability_waivers/')
     registration_date = models.DateTimeField(default=timezone.now)
 
     def __str__(self):

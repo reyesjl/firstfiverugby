@@ -1,9 +1,13 @@
 from django.shortcuts import render, redirect
 from django.contrib import messages
+from .models import HealthPlan
 from .forms import FitnessEvaluationForm
 
 def index(request):
-    context = {}
+    health_plans = HealthPlan.objects.all()
+    context = {
+        'health_plans': health_plans,
+    }
     return render(request, 'health/index.html', context)
 
 def submit_fitness_evaluation(request):
