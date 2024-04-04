@@ -18,3 +18,7 @@ staticfiles/
 
 # MacOS system files
 .DS_Store
+
+# Temp files
+health_files/
+camp_files/
