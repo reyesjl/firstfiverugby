@@ -25,8 +25,28 @@
         </div>
     </div>
 </div>
+<div class="section-strip section-strip-light tours-wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="col-7">
+                <h1 class="section-title ubuntu-light">The Bottom Line</h1>
+                <p class="subtitle"> It is easy for athletes to fall prey to nutrition
+                misinformation and fad diets.</p>
+                <p>Nutrition plays a critical role in athletic performance, and athletes, coaches, and
+                parents need to realize that making wise food choices can increase the chances
+                of optimal athletic performance.</p>
+                <p><a class="button primary" href="{% url 'health:fitness_evaluation' %}">Free Evaluation</a></p>
+            </div>
+        </div>
+    </div>
+</div>
 <div class="section-strip camps-wrapper">
     <div class="container">
+        <div class="row">
+            <div class="col-7">
+                <h1 class="section-title ubuntu-light">Free Resources</h1>
+            </div>
+        </div>
         <div class="row">
             {% for plan in health_plans %}
             <div class="col-4">
