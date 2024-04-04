@@ -1,0 +1,11 @@
+.evidence-wrapper {
+    color: white;
+}
+
+.inline-list-item {
+    color: white;
+}
+
+.inline-list-item * {
+    color: white;
+}

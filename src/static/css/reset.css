@@ -45,6 +45,10 @@ body {
   background: #f7f7f7;
 } 
 
+.section-strip-dark {
+  background: #000000;
+} 
+
 .section-title {
   margin: 0;
 }
@@ -115,6 +119,10 @@ body {
 
 .link.dark {
   color: darkred;
+}
+
+.link.green {
+  color: green;
 }
 
 .link-soft {
