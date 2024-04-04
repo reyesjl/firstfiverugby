@@ -119,7 +119,6 @@ AUTH_PASSWORD_VALIDATORS = [
 # Whitenoise compression
 WHITENOISE_USE_FINDERS = True
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/5.0/topics/i18n/
 
@@ -133,6 +132,10 @@ USE_TZ = True
 
 # File Size Limits
 DATA_UPLOAD_MAX_MEMORY_SIZE = 5242880
+
+# Media Storage configuration
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
 
 
 # Static files (CSS, JavaScript, Images)
