@@ -31,6 +31,18 @@
     background-size: 100% 100%, 60% 100%, auto;
 }
 
+.ireland-background {
+    background-image: url('/static/images/tours/ireland-bg.jpg');
+    background-size: cover; /* Adjust as needed */
+    background-position: center; /* Adjust as needed */
+}
+
+.camps-background {
+    background-image: url('/static/images/camps/camps-bg.jpg');
+    background-size: cover; /* Adjust as needed */
+    background-position: center; /* Adjust as needed */
+}
+
 .hero-wrapper {
     padding: 4rem 0;
 }

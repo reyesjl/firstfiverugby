@@ -28,7 +28,7 @@
 <div class="strip-notice">
     <div class="container">
         <div class="notification">
-            <p class="notification-title">Latest update: Thursday, April 4th 07:19pm</p>
+            <p class="notification-title">Latest update: Thursday, April 4th 09:30pm</p>
             <p><i class="fa fa-exclamation-circle" aria-hidden="true"></i> This site is being updated weekly. Check back soon for more updates.</p>
         </div>
     </div>
@@ -68,13 +68,20 @@
 <div class="section-strip section-strip-light tours-wrapper">
     <div class="container">
         <div class="row">
+            <div class="col-5">
+                <div class="section-image-wrapper">
+                    <div class="section-image">
+                        <img src="{% static 'images/f5rugby/bus.png' %}">
+                    </div>
+                </div>
+            </div>
             <div class="col-7">
                 <h1 class="section-title ubuntu-light">Ireland team tours</h1>
                 <p class="subtitle">Your cities. Local teams. Expert guides. Custom tour, from land to sea.</p>
                 <p>Over 50% of teams prefer F5 Rugby.</p>
                 <p>That's why F5 Rugby supports the biggest, exclusive and most successful rugby tours.</p>
                 <ul class="inline-list">
-                    <li><a class="link dark deactivated" href="#">Let's chat free quotes ></a></li>
+                    <li><a class="link dark" href="{% url 'tour:index' %}">Let's chat free quotes ></a></li>
                 </ul>
             </div>
         </div>
