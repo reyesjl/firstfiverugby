@@ -20,7 +20,7 @@
             <div class="col-8">
                 <h1 class="hero-title ubuntu-regular">Ireland Team Tours</h1>
                 <p class="ubuntu-light text-white">Trust in our tour guides who know the area best. Catch pro rugby games, stay in multiple cities, and take in the rich history.</p>
-                <p><a class="button primary" href="#">Free Quote</a></p>
+                <p><a class="button primary" href="{% url 'tour:tour_quote' %}">Free Quote</a></p>
             </div>
         </div>
     </div>
@@ -89,9 +89,10 @@
                 <h1 class="section-title ubuntu-light">Discovering the Past</h1>
                 <p class="subtitle">Embark on a journey through Ireland's rich history and vibrant culture.</p>
                 <ul class="section-strip inline-list">
-                <li class="inline-list-item"><i class="fa-regular fa-circle-check"></i> Enjoy leisure time exploring the surrounding <a class="link dark" href="https://en.wikipedia.org/wiki/Cliffs_of_Moher">landmarks</a>.</li>
+                    <li class="inline-list-item"><i class="fa-regular fa-circle-check"></i> Enjoy leisure time exploring the surrounding <a class="link dark" href="https://en.wikipedia.org/wiki/Cliffs_of_Moher">landmarks</a>.</li>
                     <li class="inline-list-item"><i class="fa-regular fa-circle-check"></i> Immerse yourself in local culture with visits to renowned sites.</li>
                 </ul>
+                <p><a class="button primary" href="{% url 'tour:tour_quote' %}">Free Quote</a></p>
             </div>
             <div class="col-5 hidden-sm">
                 <div class="section-image-wrapper">
