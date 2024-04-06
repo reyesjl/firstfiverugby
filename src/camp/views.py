@@ -8,6 +8,9 @@ def index(request):
     context = {'camps': all_camps}
     return render(request, 'camps/index.html', context)
 
+def select_camp_role(request):
+    return render(request, 'camps/select_role.html')
+
 # Coach link: https://buy.stripe.com/aEU9Bp1Q75oWeGs003
 # Player link: https://buy.stripe.com/8wM14TbqH4kSfKw7su
 def register_for_camp(request):
