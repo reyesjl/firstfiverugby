@@ -43,6 +43,12 @@
     background-position: center; /* Adjust as needed */
 }
 
+.health-background {
+    background-image: url('/static/images/health/health-bg.jpg');
+    background-size: cover; /* Adjust as needed */
+    background-position: center; /* Adjust as needed */
+}
+
 .hero-wrapper {
     padding: 4rem 0;
 }
