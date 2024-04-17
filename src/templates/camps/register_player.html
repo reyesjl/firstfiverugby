@@ -30,7 +30,9 @@
 <div class="container">
     <div class="row">
         <div class="col-12">
-            <p class="notification-title">{{error_message}}</p>
+            {% for message in messages %}
+                <p class="notification-title">{{ message }}</p>
+            {% endfor %}
         </div>
     </div>
 </div>
@@ -41,6 +43,7 @@
                 <form method="post" enctype="multipart/form-data">
                     {% csrf_token %}
                     {{ form.as_p }}
+                    <input type="text" name="honeypot" style="display: none;">
                     <button type="submit" class="button primary">Submit</button>
                 </form>
             </div>

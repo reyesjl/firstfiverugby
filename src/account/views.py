@@ -6,9 +6,12 @@ from .forms import SignUpForm, LoginForm
 def signup(request):
     if request.method == 'POST':
         form = SignUpForm(request.POST)
-        if form.is_valid():
+        if form.is_valid() and not request.POST.get('honeypot'):
             form.save()
-            return redirect('accounts:login')
+            return render(request, 'accounts/signup_success.html')
+        else:
+            form = SignUpForm()
+            messages.error(request, 'Ha! Bot.')
     else:
         form = SignUpForm()
 

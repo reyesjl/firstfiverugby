@@ -1,4 +1,5 @@
 # camps/views.py
+from django.contrib import messages
 from django.shortcuts import render, redirect
 from .models import Camp, GeneralRegistration
 from .forms import PlayerRegistrationForm, CoachRegistrationForm, CampRegistrationForm, CoachCampRegistrationForm
@@ -15,7 +16,6 @@ def select_camp_role(request, camp_id):
     return render(request, 'camps/select_role.html', context)
 
 def register(request, camp_id, register_type):
-    error_message = ''
     payment_link = ''
     template_name = ''
     camp = None
@@ -25,13 +25,13 @@ def register(request, camp_id, register_type):
     try:
         camp = Camp.objects.get(pk=camp_id)
     except Camp.DoesNotExist:
-        error_message = "This camp does not exist."
-        return render(request, 'camps/error.html', error_message)
+        messages.error(request, 'This camp does not exist.')
+        return render(request, 'camps/error.html')
 
     # Get the registration type from query parameters
     if register_type not in ['player', 'coach']:
-        error_message = "Invalid register type."
-        return render(request, 'camps/error.html', {'error_message': error_message})
+        messages.error(request, 'Invalid register type.')
+        return render(request, 'camps/error.html')
 
     # Determine the form based on the registration type
     if register_type == 'player':
@@ -47,23 +47,25 @@ def register(request, camp_id, register_type):
 
     # Process form
     if request.method == 'POST':
-        if form.is_valid():
+        if form.is_valid() and not request.POST.get('honeypot'):
             email = form.cleaned_data['email']
             # Check if there is already a registration with the same email under the same camp
             existing_registration = GeneralRegistration.objects.filter(camp=camp, email=email, type=register_type).exists()
             
             # Check for duplicate registration
             if existing_registration:
-                error_message = "User with this email is already registered for this camp."
+                messages.error(request, 'User with this email is already registered for this camp.')
             else:
                 registration = form.save(commit=False)
                 registration.camp = camp
                 registration.type = register_type
                 registration.save()
                 return redirect('camps:register_success', payment_link=payment_link)
+        else:
+            messages.error(request, 'Ha! Bot.')
+            return render(request, template_name, {'form': form})
 
     context = {
-        'error_message': error_message,
         'camp': camp,
         'type_string': type_string,
         'payment_link': payment_link,
