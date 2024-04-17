@@ -17,6 +17,8 @@
     <link rel="stylesheet" href="{% static 'css/simple-grid.css' %}">
     <link rel="stylesheet" href="{% static 'css/components/navigation.css' %}">
     <link rel="stylesheet" href="{% static 'css/components/footer.css' %}">
+
+
     <!-- Custom CSS tags -->
     {% block css %}
     {% endblock %}
@@ -36,6 +38,7 @@
     {% include 'components/footer.html' %}
 
     <!-- Custom JavaScript tags -->
+    <script src="{% static 'js/components/navigation.js' %}"></script>
     {% block js %}
     {% endblock %}
 </body>

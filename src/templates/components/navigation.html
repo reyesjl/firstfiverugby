@@ -1,8 +1,15 @@
 <!-- templates/components/navigation.html -->
-<div class="nav-wrapper">
+<div id="menuToggle" class="nav-toggler-wrapper">
     <div class="container">
         <div class="row">
-            <div class="col-9">
+            <div class="text-white right py-3">Menu</div>
+        </div>
+    </div>
+</div>
+<div id="menuWrapper" class="nav-wrapper">
+    <div class="container">
+        <div class="row justify-between">
+            <div class="col-7">
                 <ul class="navlist ubuntu-regular">
                     <li class="navitem"><a class="navlink" href="{% url 'index' %}">Home</a></li>
                     <li class="navitem"><a class="navlink" href="{% url 'camps:index' %}">Camps</a></li>
@@ -11,8 +18,8 @@
                     <li class="navitem"><a class="navlink deactivated" href="#">Store</a></li>
                 </ul>
             </div>
-            <div class="col-3">
-                <ul class="navlist ubuntu-regular">
+            <div class="col-5">
+                <ul class="navlist justify-end ubuntu-regular right">
                     {% if user.is_authenticated %}
                         <li class="navitem right">
                             <span class="navlink">Howdy, {{ user.username }}</span>

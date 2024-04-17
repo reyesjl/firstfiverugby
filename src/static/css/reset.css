@@ -4,6 +4,22 @@ body {
   margin: 0;
 }
 
+.my-1 {
+  margin: .10rem;
+}
+
+.py-1 {
+  padding: .1rem;
+}
+
+.py-2 {
+  padding: .3rem;
+}
+
+.py-3 {
+  padding: .5rem;
+}
+
 .no-margin-top {
   margin-top: 0;
 }
