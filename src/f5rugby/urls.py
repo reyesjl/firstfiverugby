@@ -11,6 +11,7 @@ urlpatterns = [
     path('camps/', include('camp.urls')),
     path('health/', include('health.urls')),
     path('tours/', include('tour.urls')),
+    path('accounts/', include('account.urls')),
     path('deploy-webhook/', views.webhook_handler, name='deploy_webhook'),
     path('success/', views.success_page, name='success_page'),
 ]

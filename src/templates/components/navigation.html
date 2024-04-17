@@ -1,10 +1,29 @@
 <!-- templates/components/navigation.html -->
 <div class="nav-wrapper">
-    <ul class="navlist container ubuntu-regular">
-        <li class="navitem"><a class="navlink" href="{% url 'index' %}">Home</a></li>
-        <li class="navitem"><a class="navlink" href="{% url 'camps:index' %}">Camps</a></li>
-        <li><a class="navitem"><a class="navlink" href="{% url 'tour:index' %}">Tours</a></li>
-        <li class="navitem"><a class="navlink" href="{% url 'health:index' %}">Health</a></li>
-        <li class="navitem"><a class="navlink deactivated" href="#">Store</a></li>
-    </ul>
+    <div class="container">
+        <div class="row">
+            <div class="col-9">
+                <ul class="navlist ubuntu-regular">
+                    <li class="navitem"><a class="navlink" href="{% url 'index' %}">Home</a></li>
+                    <li class="navitem"><a class="navlink" href="{% url 'camps:index' %}">Camps</a></li>
+                    <li><a class="navitem"><a class="navlink" href="{% url 'tour:index' %}">Tours</a></li>
+                    <li class="navitem"><a class="navlink" href="{% url 'health:index' %}">Health</a></li>
+                    <li class="navitem"><a class="navlink deactivated" href="#">Store</a></li>
+                </ul>
+            </div>
+            <div class="col-3">
+                <ul class="navlist ubuntu-regular">
+                    {% if user.is_authenticated %}
+                        <li class="navitem right">
+                            <span class="navlink">Howdy, {{ user.username }}</span>
+                        </li>
+                        <li class="navitem right"><a class="navlink" href="{% url 'accounts:logout' %}">Logout</a></li>
+                    {% else %}
+                        <li class="navitem right"><a class="navlink" href="{% url 'accounts:signup' %}">Sign Up</a></li>
+                        <li class="navitem right"><a class="navlink" href="{% url 'accounts:login' %}">Login</a></li>
+                    {% endif %}
+                </ul>
+            </div>
+        </div>
+    </div>
 </div>
