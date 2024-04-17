@@ -1,5 +1,5 @@
 .nav-wrapper {
-    background: rgb(33, 33, 33);
+    background: rgba(0, 0, 0, 0.893);
 }
 
 .navlist {
@@ -28,10 +28,15 @@
 
 .nav-toggler-wrapper {
     display: none;
-    background: rgb(33, 33, 33);
+    background: rgba(0, 0, 0, 0.893);
     position: fixed;
     width: 100%;
     z-index: 10;
+}
+
+.menu-toggler {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 }
 
 body.disable-scroll {
@@ -53,7 +58,6 @@ body.disable-scroll {
 
     .nav-wrapper.show-menu {
         top: 0;
-        height: 100vh;
     }
 
     .nav-toggler-wrapper {

@@ -20,6 +20,10 @@ body {
   padding: .5rem;
 }
 
+.py-5 {
+  padding: 1rem;
+}
+
 .no-margin-top {
   margin-top: 0;
 }
