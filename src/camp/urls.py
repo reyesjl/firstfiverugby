@@ -5,7 +5,7 @@ from . import views
 app_name = 'camps'
 urlpatterns = [
     path('', views.index, name='index'),
-    path('select-role/', views.select_camp_role, name='select_camp_role'),
-    path('register/', views.register_for_camp, name='register'),
-    path('coach-register/', views.register_for_camp_as_coach, name='register_coach')
+    path('select-role/<int:camp_id>/', views.select_camp_role, name='select_camp_role'),
+    path('register/<int:camp_id>/<str:register_type>/', views.register, name='register_new'),
+    path('register-success/<path:payment_link>/', views.register_success, name='register_success'),
 ]

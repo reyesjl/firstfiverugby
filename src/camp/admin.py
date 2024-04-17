@@ -1,21 +1,15 @@
 from django.contrib import admin
-from .models import Camp, CampRegistration, CoachCampRegistration
+from .models import Camp, GeneralRegistration, CampRegistration, CoachCampRegistration
 
 class CampAdmin(admin.ModelAdmin):
     list_display = ('title', 'start_date', 'end_date')
     search_fields = ('title',)  # Enable search by camp name
     list_filter = ('tags',)  # Enable filtering by tags
 
-class CampRegistrationAdmin(admin.ModelAdmin):
-    list_display = ('player_first_name', 'player_last_name', 'camp', 'registration_date')
-    list_filter = ('camp', 'registration_date')
-    search_fields = ('player_first_name', 'player_last_name', 'camp__title')
-
-class CoachCampRegistrationAdmin(admin.ModelAdmin):
-    list_display = ('coach_first_name', 'coach_last_name', 'camp', 'registration_date')
-    list_filter = ('camp', 'registration_date')
-    search_fields = ('coach_first_name', 'coach_last_name', 'camp__title')
+class GeneralRegistrationAdmin(admin.ModelAdmin):
+    list_display = ('first_name', 'last_name', 'type', 'camp','has_paid')
+    list_filter = ('type', 'camp', 'has_paid')
+    search_fields = ('first_name', 'last_name', 'phone', 'emergency_phone', 'email', 'emergency_email')
 
 admin.site.register(Camp, CampAdmin)
-admin.site.register(CampRegistration, CampRegistrationAdmin)
-admin.site.register(CoachCampRegistration, CoachCampRegistrationAdmin)
+admin.site.register(GeneralRegistration, GeneralRegistrationAdmin)

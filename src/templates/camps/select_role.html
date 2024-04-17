@@ -24,10 +24,10 @@
         </div>
         <div class="row select-role-row">
             <div class="col">
-                <p><a class="button primary" href="{% url 'camps:register' %}">Player</a></p>
+                <p><a class="button primary" href="{% url 'camps:register_new' camp_id 'player' %}">Player</a></p>
             </div>
             <div class="col">
-                <p><a class="button primary" href="{% url 'camps:register_coach' %}">Coach</a></p>
+                <p><a class="button primary" href="{% url 'camps:register_new' camp_id 'coach' %}">Coach</a></p>
             </div>
         </div>
     </div>

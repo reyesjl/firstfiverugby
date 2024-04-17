@@ -87,6 +87,10 @@
     padding: 1rem 0;
 }
 
+.content-spacer {
+    min-height: 80vh;
+}
+
 @media only screen and (max-width: 600px) {
     .logo-section {
         line-height: 0;
