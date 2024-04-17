@@ -16,6 +16,9 @@ def signup(request):
             if honeypot:
                 error_message = 'Alert: Bot detected! This incident will be reported to the administrator.'
                 messages.error(request, error_message)
+            else:
+                error_message = 'Correct the errors below.'
+                messages.error(request, error_message)
     else:
         form = SignUpForm()
 
