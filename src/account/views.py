@@ -16,15 +16,6 @@ def signup(request):
             if honeypot:
                 error_message = 'Alert: Bot detected! This incident will be reported to the administrator.'
                 messages.error(request, error_message)
-            elif len(password) < 8:
-                error_message = 'Password must be at least 8 characters long.'
-                messages.error(request, error_message)
-            elif password.isdigit():
-                error_message = 'Password cannot be fully numeric.'
-                messages.error(request, error_message)
-            else:
-                error_message = 'Please correct the errors below.'
-                messages.error(request, error_message)
     else:
         form = SignUpForm()
 

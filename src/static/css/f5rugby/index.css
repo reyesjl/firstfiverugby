@@ -97,6 +97,15 @@
     min-height: 80vh;
 }
 
+.errorlist {
+    padding: 0;
+    margin: 0;
+}
+
+.errorlist li {
+    color: darkred;
+}
+
 @media only screen and (max-width: 600px) {
     .logo-section {
         line-height: 0;
