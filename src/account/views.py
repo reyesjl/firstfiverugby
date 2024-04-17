@@ -6,12 +6,21 @@ from .forms import SignUpForm, LoginForm
 def signup(request):
     if request.method == 'POST':
         form = SignUpForm(request.POST)
-        if form.is_valid() and not request.POST.get('honeypot'):
+        honeypot = request.POST.get('honeypot', None)
+        password = request.POST.get('password', None)
+
+        if form.is_valid() and not honeypot:
             form.save()
             return render(request, 'accounts/signup_success.html')
         else:
-            form = SignUpForm()
-            messages.error(request, 'Ha! Bot.')
+            if honeypot:
+                error_message = 'Alert: Bot detected! This incident will be reported to the administrator.'
+            elif len(password) < 8:
+                error_message = 'Password must be at least 8 characters long.'
+            elif password.isdigit():
+                error_message = 'Password cannot be fully numeric.'
+            else:
+                error_message = 'Please correct the errors below.'
     else:
         form = SignUpForm()
 
