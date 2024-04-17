@@ -6,8 +6,8 @@ from .forms import SignUpForm, LoginForm
 def signup(request):
     if request.method == 'POST':
         form = SignUpForm(request.POST)
-        honeypot = request.POST.get('honeypot', None)
-        password = request.POST.get('password', None)
+        honeypot = request.POST.get('honeypot', '')
+        password = request.POST.get('password', '')
 
         if form.is_valid() and not honeypot:
             form.save()
