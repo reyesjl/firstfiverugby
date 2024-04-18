@@ -1,10 +1,11 @@
-from django.shortcuts import render, redirect
-from django.contrib.auth import authenticate, login, logout
-from django.contrib.auth.decorators import login_required
-from .decorators import manager_required
+from django.db.models import Q
 from django.contrib import messages
 from .forms import SignUpForm, LoginForm
+from .decorators import manager_required
+from django.shortcuts import render, redirect
 from camp.models import Camp, GeneralRegistration
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth import authenticate, login, logout
 
 def signup(request):
     if request.method == 'POST':
@@ -77,7 +78,26 @@ def dashboard(request):
 def camps_summary(request):
     registrations = GeneralRegistration.objects.all()
 
-    # Calculate revenue
+    # Filter by search query
+    search_query = request.GET.get('search')
+    if search_query:
+        registrations = registrations.filter(
+            Q(first_name__icontains=search_query) |
+            Q(last_name__icontains=search_query) |
+            Q(email__icontains=search_query)
+        )
+
+    # Filter by type
+    type_filter = request.GET.get('type')
+    if type_filter:
+        registrations = registrations.filter(type=type_filter)
+
+    # Filter by paid status
+    paid_filter = request.GET.get('paid')
+    if paid_filter in ['true', 'false']:
+        registrations = registrations.filter(has_paid=(paid_filter == 'true'))
+
+    # Calculate revenue and other statistics
     total_revenue = 0
     total_coaches = 0
     total_players = 0
@@ -88,7 +108,7 @@ def camps_summary(request):
         elif registration.type == 'player':
             total_revenue += 325
             total_players += 1
-    
+
     context = {
         'registrations': registrations,
         'total_revenue': total_revenue,

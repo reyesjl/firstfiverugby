@@ -137,6 +137,17 @@ body {
   border-color: #0c6d1a;
 }
 
+.button.clear {
+  background-color: #840e0e;
+  border-color: #840e0e;
+  color: #fff;
+}
+
+.button.clear:hover {
+  background-color: #6d0c0c;
+  border-color: #6d0c0c;
+}
+
 /* Links */
 .link {
   text-decoration: none;
