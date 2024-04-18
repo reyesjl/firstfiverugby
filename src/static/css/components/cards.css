@@ -7,9 +7,30 @@
     margin-bottom: 1.5rem;
 }
 
+.card-metric {
+    height: 130px;
+    display: flex !important;
+    flex-direction: column;
+    padding: 0;
+    box-shadow: 0 1px 1px 0 rgba(0,0,0,.15), 0 2px 2px -1px rgba(0,0,0,.15), 0 0 3px 0 rgba(0,0,0,.2);
+    margin-bottom: 1.5rem;
+}
+
 .card-header {
     border-top: 3px solid #772121;
     padding: 1rem 1rem .5rem;
+}
+
+.card-header.border-top-green {
+    border-top: 3px solid green;
+}
+
+.card-header.border-top-orange {
+    border-top: 3px solid rgb(194, 126, 0);
+}
+
+.card-header.border-top-blue {
+    border-top: 3px solid rgb(0, 0, 183);
 }
 
 .card-content {
@@ -43,6 +64,10 @@
     margin: auto .5rem 0;
     max-width: inherit;
     padding: 1rem .5rem;
+}
+
+.card-footer.border-green {
+    border-bottom: 4px solid green;
 }
 
 .card-footer p {

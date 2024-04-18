@@ -1,7 +1,9 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from .forms import SignUpForm, LoginForm
+from camp.models import Camp, GeneralRegistration
 
 def signup(request):
     if request.method == 'POST':
@@ -52,3 +54,34 @@ def logon(request):
 def logoff(request):
     logout(request)
     return redirect('index')
+
+@login_required
+def dashboard(request):
+    context = {
+        'motd': 'Success is no accident. It is hard work, perseverance, learning, studying, sacrifice and most of all, love of what you are doing or learning to do.',
+    }
+    return render(request, 'accounts/dashboard.html', context)
+
+@login_required
+def camps_summary(request):
+    registrations = GeneralRegistration.objects.all()
+
+    # Calculate revenue
+    total_revenue = 0
+    total_coaches = 0
+    total_players = 0
+    for registration in registrations:
+        if registration.type == 'coach':
+            total_revenue += 100
+            total_coaches += 1
+        elif registration.type == 'player':
+            total_revenue += 325
+            total_players += 1
+    
+    context = {
+        'registrations': registrations,
+        'total_revenue': total_revenue,
+        'total_players': total_players,
+        'total_coaches': total_coaches,
+    }
+    return render(request, 'accounts/camps_summary.html', context)

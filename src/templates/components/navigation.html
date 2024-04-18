@@ -22,7 +22,7 @@
                 <ul class="navlist justify-end ubuntu-regular right">
                     {% if user.is_authenticated %}
                         <li class="navitem right">
-                            <span class="navlink">Howdy, {{ user.username }}</span>
+                            <li class="navitem right"><a class="navlink" href="{% url 'accounts:dashboard' %}">{{ user.username }}</a></li>
                         </li>
                         <li class="navitem right"><a class="navlink" href="{% url 'accounts:logout' %}">Logout</a></li>
                     {% else %}

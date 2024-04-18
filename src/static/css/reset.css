@@ -4,24 +4,38 @@ body {
   margin: 0;
 }
 
-.my-1 {
-  margin: .10rem;
+:root {
+  --spacing-multiplier: 1rem;
 }
 
-.py-1 {
-  padding: .1rem;
+[class*="pt-"],
+[class*="pb-"] {
+  padding-top: var(--spacing-multiplier);
+  padding-bottom: var(--spacing-multiplier);
 }
 
-.py-2 {
-  padding: .3rem;
+.pt-2,
+.pb-2 {
+  padding-top: calc(var(--spacing-multiplier) * 2);
+  padding-bottom: calc(var(--spacing-multiplier) * 2);
 }
 
-.py-3 {
-  padding: .5rem;
+.pt-3,
+.pb-3 {
+  padding-top: calc(var(--spacing-multiplier) * 3);
+  padding-bottom: calc(var(--spacing-multiplier) * 3);
 }
 
-.py-5 {
-  padding: 1rem;
+.pt-4,
+.pb-4 {
+  padding-top: calc(var(--spacing-multiplier) * 4);
+  padding-bottom: calc(var(--spacing-multiplier) * 4);
+}
+
+.pt-5,
+.pb-5 {
+  padding-top: calc(var(--spacing-multiplier) * 5);
+  padding-bottom: calc(var(--spacing-multiplier) * 5);
 }
 
 .no-margin-top {
@@ -160,6 +174,13 @@ body {
 }
 
 .link.deactivated {
+  color: #6c6c6c; /* Change the color to a grayish tone */
+  text-decoration: none; /* Remove underline */
+  pointer-events: none; /* Disable click events */
+  cursor: default; /* Change cursor to default */
+}
+
+.link-soft.deactivated {
   color: #6c6c6c; /* Change the color to a grayish tone */
   text-decoration: none; /* Remove underline */
   pointer-events: none; /* Disable click events */
