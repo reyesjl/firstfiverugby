@@ -57,10 +57,20 @@ def logoff(request):
 
 @login_required
 def dashboard(request):
+    user = request.user
+
     context = {
         'motd': 'Success is no accident. It is hard work, perseverance, learning, studying, sacrifice and most of all, love of what you are doing or learning to do.',
     }
-    return render(request, 'accounts/dashboard.html', context)
+    
+    # Check if the user belongs to a specific group
+    if user.groups.filter(name='Manager').exists():
+        return render(request, 'accounts/admin_dashboard.html', context)
+    elif user.groups.filter(name='Trainer').exists():
+        return render(request, 'accounts/trainer_dashboard.html', context)
+    else:
+        return render(request, 'accounts/default_dashboard.html', context)
+    
 
 @login_required
 def camps_summary(request):
