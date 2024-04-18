@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
+from .decorators import manager_required
 from django.contrib import messages
 from .forms import SignUpForm, LoginForm
 from camp.models import Camp, GeneralRegistration
@@ -70,9 +71,9 @@ def dashboard(request):
         return render(request, 'accounts/trainer_dashboard.html', context)
     else:
         return render(request, 'accounts/default_dashboard.html', context)
-    
 
 @login_required
+@manager_required
 def camps_summary(request):
     registrations = GeneralRegistration.objects.all()
 
