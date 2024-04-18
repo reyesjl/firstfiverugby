@@ -71,6 +71,9 @@
         </div>
         <div class="row">
             <div class="col-12">
+                <a class="link black" href="#" id="toggle-filters">Filters ></a>
+            </div>
+            <div class="col-12 {% if collapsed %}collapsed{% endif %}" id="filter-form-wrapper">
                 <form id="filter-form" class="pt-2" method="GET" action="">
                     <div class="row">
                         <div class="col">
@@ -140,4 +143,5 @@
 <!-- Custom JavaScript tags -->
 {% block js %}
 <script src="{% static 'js/camps/camps_summary.js' %}"></script>
+<script src="{% static 'js/components/filters.js' %}"></script>
 {% endblock %}

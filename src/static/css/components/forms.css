@@ -41,3 +41,7 @@ button.button.primary {
     margin: 0;
     margin-top: 15px;
 }
+
+#filter-form-wrapper.collapsed {
+    display: none;
+}

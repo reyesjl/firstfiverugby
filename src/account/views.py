@@ -77,6 +77,7 @@ def dashboard(request):
 @manager_required
 def camps_summary(request):
     registrations = GeneralRegistration.objects.all()
+    collapsed = True
 
     # Filter by search query
     search_query = request.GET.get('search')
@@ -86,17 +87,20 @@ def camps_summary(request):
             Q(last_name__icontains=search_query) |
             Q(email__icontains=search_query)
         )
+        collapsed = False
 
     # Filter by type
     type_filter = request.GET.get('type')
     if type_filter:
         registrations = registrations.filter(type=type_filter)
+        collapsed = False
 
     # Filter by paid status
     paid_filter = request.GET.get('paid')
     if paid_filter in ['true', 'false']:
         registrations = registrations.filter(has_paid=(paid_filter == 'true'))
-
+        collapsed = False
+        
     # Calculate revenue and other statistics
     total_revenue = 0
     total_coaches = 0
@@ -114,5 +118,6 @@ def camps_summary(request):
         'total_revenue': total_revenue,
         'total_players': total_players,
         'total_coaches': total_coaches,
+        'collapsed': collapsed,
     }
     return render(request, 'accounts/camps_summary.html', context)
