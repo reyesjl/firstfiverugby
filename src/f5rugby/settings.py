@@ -66,6 +66,7 @@ INSTALLED_APPS = [
     'camp',
     'health',
     'tour',
+    'blog',
     'account',
 ]
 

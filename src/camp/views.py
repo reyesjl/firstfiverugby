@@ -14,7 +14,7 @@ def details(request, camp_id):
         camp = Camp.objects.get(pk=camp_id)
     except Camp.DoesNotExist:
         messages.error(request, 'This camp does not exist.')
-        return render(request, 'camps/error.html')
+        return render(request, 'f5rugby/error.html')
     
     context ={
         'camp': camp,
@@ -39,12 +39,12 @@ def register(request, camp_id, register_type):
         camp = Camp.objects.get(pk=camp_id)
     except Camp.DoesNotExist:
         messages.error(request, 'This camp does not exist.')
-        return render(request, 'camps/error.html')
+        return render(request, 'f5rugby/error.html')
 
     # Get the registration type from query parameters
     if register_type not in ['player', 'coach']:
         messages.error(request, 'Invalid register type.')
-        return render(request, 'camps/error.html')
+        return render(request, 'f5rugby/error.html')
 
     # Determine the form based on the registration type
     if register_type == 'player':

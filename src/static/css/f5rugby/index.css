@@ -49,6 +49,12 @@
     background-position: center; /* Adjust as needed */
 }
 
+.blog-background {
+    background-image: url('/static/images/blog/blog-bg.jpg');
+    background-size: cover; /* Adjust as needed */
+    background-position: center; /* Adjust as needed */
+}
+
 .hero-wrapper {
     padding: 6rem 0 4rem 0;
 }
