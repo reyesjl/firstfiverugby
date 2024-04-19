@@ -6,6 +6,7 @@
 {% load static %}
 {% block css %}
     <link rel="stylesheet" href="{% static 'css/f5rugby/index.css' %}">
+    <link rel="stylesheet" href="{% static 'css/camps/camps_summary.css' %}">
     <link rel="stylesheet" href="{% static 'css/components/cards.css' %}">
     <link rel="stylesheet" href="{% static 'css/components/forms.css' %}">
     <link rel="stylesheet" href="{% static 'css/components/tables.css' %}">
@@ -110,7 +111,7 @@
         </div>
         <div class="row">
             <div class="col-12 table-wrapper">
-                <table>
+                <table id="camps-table">
                     <thead>
                         <tr>
                             <th>First Name</th>
@@ -123,7 +124,7 @@
                     </thead>
                     <tbody>
                         {% for registration in registrations %}
-                        <tr>
+                        <tr data-record-id="{{ registration.id }}">
                             <td>{{ registration.first_name }}</td>
                             <td>{{ registration.last_name }}</td>
                             <td>{{ registration.camp.title }}</td>
