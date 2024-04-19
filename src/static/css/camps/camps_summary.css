@@ -1,3 +1,7 @@
 .selected {
     background-color: rgb(196, 192, 153);
 }
+
+tr:hover {
+    cursor: pointer;
+}
