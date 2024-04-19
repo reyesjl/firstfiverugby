@@ -19,10 +19,11 @@
             <div class="col-8">
                 <p class="text-white no-margin-bottom no-margin-top">{{ camp.start_date|date:"F j" }} - {{ camp.end_date|date:"j" }}</p>
                 <h1 class="hero-title ubuntu-regular">{{camp.title}} Rugby Camp</h1>
-                <p class="text-white"><i class="fa-solid fa-location-dot text-white"></i> {{ camp.address }}</p>
+                <p class="text-white"><i class="fa-solid fa-location-dot text-white"></i> <a href="https://www.google.com/maps/search/?api=1&query={{ camp.address }}" class="text-white" target="_blank">{{ camp.address }}</a></p>
                 <div class="text-white right">Player: ${{camp.player_price}} | Coach: ${{camp.coach_price}}</div>
                 <hr>
                 <p class="text-white">{{ camp.details }}</p>
+                <p class="text-white">Direct questions to <a class="text-white" href="mailto:info@f5rugby.com">info@f5rugby.com</a></p>
                 <a class="button primary" href="{% url 'camps:select_camp_role' camp.id %}">Register</a>
             </div>
         </div>
