@@ -9,6 +9,19 @@ def index(request):
     context = {'camps': all_camps}
     return render(request, 'camps/index.html', context)
 
+def details(request, camp_id):
+    try:
+        camp = Camp.objects.get(pk=camp_id)
+    except Camp.DoesNotExist:
+        messages.error(request, 'This camp does not exist.')
+        return render(request, 'camps/error.html')
+    
+    context ={
+        'camp': camp,
+    }
+    return render(request, 'camps/details.html', context)
+
+
 def select_camp_role(request, camp_id):
     context = {
         'camp_id': camp_id,

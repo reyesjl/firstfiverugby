@@ -39,7 +39,7 @@
                         <h5 class="muted-heading">{{ camp.tags }}</h5>
                     </header>
                     <div class="card-content">
-                        <h3 class="no-margin-top no-margin-bottom"><a class="link-soft underlined" href="{% url 'camps:select_camp_role' camp.id %}">{{ camp.title }}</a></h3>
+                        <h3 class="no-margin-top no-margin-bottom"><a class="link-soft underlined" href="{% url 'camps:details' camp.id %}">{{ camp.title }}</a></h3>
                         <p>{{ camp.description }}</p>
                     </div>
                     <div class="card-footer">

@@ -3,10 +3,14 @@ from django.utils import timezone
 
 class Camp(models.Model):
     title = models.CharField(max_length=100)
+    address = models.CharField(max_length=150, blank=True)
     description = models.TextField()
     start_date = models.DateField()
     end_date = models.DateField()
     tags = models.CharField(max_length=255, blank=True)
+    details = models.TextField(default='')
+    coach_price = models.IntegerField(blank=True, null=True)
+    player_price = models.IntegerField(blank=True, null=True)
     coach_payment_link = models.CharField(max_length=255, blank=True)
     player_payment_link = models.CharField(max_length=255, blank=True)
 
