@@ -20,6 +20,7 @@
                 <p class="text-white no-margin-bottom no-margin-top">{{ camp.start_date|date:"F j" }} - {{ camp.end_date|date:"j" }}</p>
                 <h1 class="hero-title ubuntu-regular">{{camp.title}} Rugby Camp</h1>
                 <p class="text-white"><i class="fa-solid fa-location-dot text-white"></i> {{ camp.address }}</p>
+                <div class="text-white right">Player: ${{camp.player_price}} | Coach: ${{camp.coach_price}}</div>
                 <hr>
                 <p class="text-white">{{ camp.details }}</p>
                 <a class="button primary" href="{% url 'camps:select_camp_role' camp.id %}">Register</a>
