@@ -1,5 +1,5 @@
 .nav-wrapper {
-    background: rgba(0, 0, 0, 0.893);
+    background: rgb(0, 0, 0);
 }
 
 .navlist {
@@ -37,6 +37,7 @@
 .menu-toggler {
     padding-top: 1rem;
     padding-bottom: 1rem;
+    cursor: pointer;
 }
 
 body.disable-scroll {
@@ -45,15 +46,12 @@ body.disable-scroll {
 
 /* Add this CSS for responsiveness */
 @media screen and (max-width: 768px) {
-    .navlist {
-        justify-content: end;
-    }
-
     .nav-wrapper {
         position: fixed;
         top: -100%;
         z-index: 10;
         padding-top: 40px;
+        width: 100%;
     }
 
     .nav-wrapper.show-menu {

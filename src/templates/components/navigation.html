@@ -1,3 +1,6 @@
+<!-- load the static tag -->
+{% load static %}
+
 <!-- templates/components/navigation.html -->
 <div id="menuToggle" class="nav-toggler-wrapper">
     <div class="container">
@@ -9,6 +12,15 @@
 <div id="menuWrapper" class="nav-wrapper">
     <div class="container">
         <div class="row justify-between">
+            <div class="col">
+                <ul class="navlist ubuntu-regular">
+                    <li class="navitem">
+                        <a class="navlink" href="{% url 'index' %}">
+                            <img width="100px" src="{% static 'images/f5rugby/firstfivelogo.png' %}" />
+                        </a>
+                    </li>
+                </ul>
+            </div>
             <div class="col-7">
                 <ul class="navlist ubuntu-regular">
                     <li class="navitem"><a class="navlink" href="{% url 'index' %}">Home</a></li>
@@ -19,7 +31,7 @@
                     <li class="navitem"><a class="navlink deactivated" href="#">Store</a></li>
                 </ul>
             </div>
-            <div class="col-5">
+            <div class="col">
                 <ul class="navlist justify-end ubuntu-regular right">
                     {% if user.is_authenticated %}
                         <li class="navitem right">
