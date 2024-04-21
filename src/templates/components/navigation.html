@@ -5,14 +5,23 @@
 <div id="menuToggle" class="nav-toggler-wrapper">
     <div class="container">
         <div class="row">
-            <div class="menu-toggler text-white right">Menu</div>
+            <div class="col-9-sm">
+                <div class="mobile-logo">
+                    <a class="navlink" href="{% url 'index' %}">
+                        <img width="100px" src="{% static 'images/f5rugby/firstfivelogo.png' %}" />
+                    </a>
+                </div>
+            </div>
+            <div class="col-3-sm">
+                <div class="menu-toggler text-white right">Menu</div>
+            </div>
         </div>
     </div>
 </div>
 <div id="menuWrapper" class="nav-wrapper">
     <div class="container">
-        <div class="row justify-between">
-            <div class="col">
+        <div class="row">
+            <div class="col hidden-sm">
                 <ul class="navlist ubuntu-regular">
                     <li class="navitem">
                         <a class="navlink" href="{% url 'index' %}">
