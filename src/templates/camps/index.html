@@ -22,8 +22,6 @@
                 <div class="hero-solid-content">
                     <h1 class="hero-title ubuntu-regular">Camps</h1>
                     <p class="ubuntu-light text-white">Rugby camps led by an experienced coaching staff. Learn to see the whole pitch and raise your rugby IQ. Develop your skills with tons of reps and precise feedback.</p>
-                    <p><a class="link light" href="https://www.cardiffrugby.wales/">Meet the Cardiff Blues ></a></p>
-                    <p><a class="link light" href="https://twitter.com/andyskehan?lang=en">Meet Andy Skehan ></a></p>
                 </div>
             </div>
         </div>
@@ -32,8 +30,9 @@
 <div class="section-strip camps-wrapper">
     <div class="container">
         <div class="row">
+            <h1 class="section-title ubuntu-light">Upcoming camps</h1>
             {% for camp in camps %}
-            <div class="col-4">
+            <div class="col-4 pt-3">
                 <div class="card-post">
                     <header class="card-header">
                         <h5 class="muted-heading">{{ camp.tags }}</h5>
@@ -66,21 +65,21 @@
         </div>
     </div>
 </div>
-<div class="section-strip camp-archive">
+<div class="section-strip section-strip-light tours-wrapper">
     <div class="container">
         <div class="row">
-            <div class="col-7">
-                <h1 class="section-title ubuntu-light">Camp Archives</h1>
-                <p>Enjoy some moments from previous camps!</p>
+            <div class="col-5">
+                <div class="section-image-wrapper">
+                    <div class="section-image">
+                        <img alt="cardiff blues crest" src="{% static 'images/camps/cardiff-blues-logo.png' %}">
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-12">
-                <video class="camp-video" controls autoplay loop muted playsinline>
-                    <source src="{% static 'videos/camps/baltimore-camp.mp4' %}" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-                <p class="video-subtitle center">Baltimore & Philadelphia 2023</p>
+            <div class="col-7">
+                <h1 class="section-title ubuntu-light">The Cardiff Blues</h1>
+                <p class="subtitle">Welsh rugby. Showcasing skill, determination, and the spirit of the game.</p>
+                <p>The Cardiff Blues Rugby team, based in Cardiff, Wales, competes in the United Rugby Championship.</p>
+                <p>Established in 2003, they've become renowned for producing talented players who often represent Wales and contribute to British and Irish Lions tours.</p>
             </div>
         </div>
     </div>
