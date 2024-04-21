@@ -38,6 +38,14 @@ body {
   padding-bottom: calc(var(--spacing-multiplier) * 5);
 }
 
+.no-padding-top {
+  padding-top: 0;
+}
+
+.no-padding-bottom {
+  padding-top: 0;
+}
+
 .no-margin-top {
   margin-top: 0;
 }

@@ -30,38 +30,40 @@
 <div class="section-strip camps-wrapper">
     <div class="container">
         <div class="row">
-            <h1 class="section-title ubuntu-light pb-3">Upcoming camps</h1>
-            {% for camp in camps %}
-            <div class="col-4">
-                <div class="card-post">
-                    <header class="card-header">
-                        <h5 class="muted-heading">{{ camp.tags }}</h5>
-                    </header>
-                    <div class="card-content">
-                        <h3 class="no-margin-top no-margin-bottom"><a class="link-soft underlined" href="{% url 'camps:details' camp.id %}">{{ camp.title }}</a></h3>
-                        <p>{{ camp.description }}</p>
-                    </div>
-                    <div class="card-footer">
-                        <p class="no-margin-bottom no-margin-top">Date: {{ camp.start_date|date:"F j" }} - {{ camp.end_date|date:"j" }}</p>
-                    </div>
-                </div>
-            </div>
-            {% empty %}
-            <div class="col-4">
-                <div class="card-post">
-                    <header class="card-header">
-                        <h5 class="muted-heading">Empty</h5>
-                    </header>
-                    <div class="card-content">
-                        <h3 class="no-margin-top no-margin-bottom"><a class="link-soft underlined" href="">No Camps.</a></h3>
-                        <p>Come back soon, no camps have been added yet.</p>
-                    </div>
-                    <div class="card-footer">
-                        <p class="no-margin-bottom no-margin-top">Coming soon.</p>
+            <h1 class="section-title ubuntu-light">Upcoming camps</h1>
+            <div class="camps-container pt-1">
+                {% for camp in camps %}
+                <div class="col-4">
+                    <div class="card-post">
+                        <header class="card-header">
+                            <h5 class="muted-heading">{{ camp.tags }}</h5>
+                        </header>
+                        <div class="card-content">
+                            <h3 class="no-margin-top no-margin-bottom"><a class="link-soft underlined" href="{% url 'camps:details' camp.id %}">{{ camp.title }}</a></h3>
+                            <p>{{ camp.description }}</p>
+                        </div>
+                        <div class="card-footer">
+                            <p class="no-margin-bottom no-margin-top">Date: {{ camp.start_date|date:"F j" }} - {{ camp.end_date|date:"j" }}</p>
+                        </div>
                     </div>
                 </div>
+                {% empty %}
+                <div class="col-4">
+                    <div class="card-post">
+                        <header class="card-header">
+                            <h5 class="muted-heading">Empty</h5>
+                        </header>
+                        <div class="card-content">
+                            <h3 class="no-margin-top no-margin-bottom"><a class="link-soft underlined" href="">No Camps.</a></h3>
+                            <p>Come back soon, no camps have been added yet.</p>
+                        </div>
+                        <div class="card-footer">
+                            <p class="no-margin-bottom no-margin-top">Coming soon.</p>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
             </div>
-            {% endfor %}
         </div>
     </div>
 </div>
@@ -80,6 +82,41 @@
                 <p class="subtitle">Welsh rugby. Showcasing skill, determination, and the spirit of the game.</p>
                 <p>The Cardiff Blues Rugby team, based in Cardiff, Wales, competes in the United Rugby Championship.</p>
                 <p>Established in 2003, they've become renowned for producing talented players who often represent Wales and contribute to British and Irish Lions tours.</p>
+                <p><a class="link dark" href="https://www.cardiffrugby.wales/">More about Cardiff Blues ></a></p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="section-strip health-wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="col-5 hidden-lg">
+                <div class="section-image-wrapper">
+                    <div class="section-image">
+                        <img src="{% static 'images/camps/andy-skehan-profile.png' %}">
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-7">
+                <h1 class="section-title ubuntu-light">Andy Skehan</h1>
+                <p class="subtitle">Attention to detail enhances a player's journey.</p>
+                <p>Andy Skehan is a seasoned rugby coach known for his professionalism.</p>
+
+                <ul class="section-strip inline-list">
+                    <li class="inline-list-item"><i class="fa-regular fa-circle-check"></i> Managed diverse rugby program with 19 teams and 35+ coaches.</li>
+                    <li class="inline-list-item"><i class="fa-regular fa-circle-check"></i> Recognized for fostering winning cultures and developing talented players.</li>
+                    <li class="inline-list-item"><i class="fa-regular fa-circle-check"></i> Praised for clear communication, attention to detail, and ability to elevate team performance.</li>
+                </ul>
+
+                <p><a class="link dark" href="https://twitter.com/andyskehan?lang=en">More about Andy ></a></p>
+            </div>
+            <div class="col-5 hidden-sm">
+                <div class="section-image-wrapper">
+                    <div class="section-image">
+                        <img src="{% static 'images/camps/andy-skehan-profile.png' %}">
+                    </div>
+                </div>
             </div>
         </div>
     </div>
