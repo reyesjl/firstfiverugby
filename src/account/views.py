@@ -107,10 +107,10 @@ def camps_summary(request):
     total_players = 0
     for registration in registrations:
         if registration.type == 'coach':
-            total_revenue += 100
+            total_revenue += registration.camp.coach_price
             total_coaches += 1
         elif registration.type == 'player':
-            total_revenue += 325
+            total_revenue += registration.camp.player_price
             total_players += 1
 
     context = {
