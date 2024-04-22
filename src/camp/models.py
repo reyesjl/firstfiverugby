@@ -9,6 +9,7 @@ class Camp(models.Model):
     end_date = models.DateField()
     tags = models.CharField(max_length=255, blank=True)
     details = models.TextField(default='')
+    crest = models.FileField(upload_to='camp_files/camp_crests/', blank=True)
     coach_price = models.IntegerField(blank=True, null=True)
     player_price = models.IntegerField(blank=True, null=True)
     coach_payment_link = models.CharField(max_length=255, blank=True)

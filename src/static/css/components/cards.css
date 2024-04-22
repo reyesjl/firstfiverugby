@@ -1,5 +1,4 @@
 .card-post {
-    height: 260px;
     display: flex !important;
     flex-direction: column;
     padding: 0;
@@ -49,6 +48,11 @@
     height: 100%;
     margin: 0 .5rem;
     padding: 1rem .5rem .5rem;
+}
+
+.card-image img {
+    width: 50%;
+    text-align: center;
 }
 
 .card-content p {
