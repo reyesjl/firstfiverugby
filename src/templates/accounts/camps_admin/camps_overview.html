@@ -82,6 +82,10 @@
                             <input type="text" id="search" name="search" placeholder="name or email" value="{{ request.GET.search }}">
                         </div>
                         <div class="col">
+                            <label for="camp_title">Camp:</label>
+                            <input type="text" id="camp_title" name="camp_title" value="{{ request.GET.camp_title }}" placeholder="camp title">
+                        </div>
+                        <div class="col">
                             <label for="type">Type:</label>
                             <select id="type" name="type">
                                 <option value="">All</option>
@@ -114,6 +118,7 @@
                 <table id="camps-table">
                     <thead>
                         <tr>
+                            <th>Edit</th>
                             <th>First Name</th>
                             <th>Last Name</th>
                             <th>Camp Title</th>
@@ -125,6 +130,7 @@
                     <tbody>
                         {% for registration in registrations %}
                         <tr data-record-id="{{ registration.id }}">
+                            <td><a href="{% url 'camps:edit_registration' registration.id %}"><i class="fa-solid fa-pencil"></i></a></td>
                             <td>{{ registration.first_name }}</td>
                             <td>{{ registration.last_name }}</td>
                             <td>{{ registration.camp.title }}</td>

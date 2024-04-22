@@ -9,4 +9,5 @@ urlpatterns = [
     path('select-role/<int:camp_id>/', views.select_camp_role, name='select_camp_role'),
     path('register/<int:camp_id>/<str:register_type>/', views.register, name='register_new'),
     path('register-success/<path:payment_link>/', views.register_success, name='register_success'),
+    path('edit-registration/<int:registration_id>/', views.edit_registration, name='edit_registration'),
 ]

@@ -2,7 +2,9 @@
 from django.contrib import messages
 from django.shortcuts import render, redirect
 from .models import Camp, GeneralRegistration
-from .forms import PlayerRegistrationForm, CoachRegistrationForm, CampRegistrationForm, CoachCampRegistrationForm
+from account.decorators import manager_required
+from django.contrib.auth.decorators import login_required
+from .forms import PlayerRegistrationForm, CoachRegistrationForm, ModifyPlayerRegistrationForm, ModifyCoachRegistrationForm
 
 def index(request):
     all_camps = Camp.objects.order_by('start_date')
@@ -85,6 +87,33 @@ def register(request, camp_id, register_type):
         'form': form,
     }
     return render(request, template_name, context)
+
+@login_required
+@manager_required
+def edit_registration(request, registration_id):
+    try:
+        registration = GeneralRegistration.objects.get(pk=registration_id)
+    except GeneralRegistration.DoesNotExist:
+        messages.error(request, 'This registrations does not exist.')
+        return render(request, 'f5rugby/error.html')
+    
+    if registration.type == 'player':
+        form_class = ModifyPlayerRegistrationForm
+    elif registration.type == 'coach':
+        form_class = ModifyCoachRegistrationForm
+    else:
+        messages.error(request, 'Unknown registration type.')
+        return render(request, 'f5rugby/error.html')
+
+    if request.method == 'POST':
+        form = form_class(request.POST, request.FILES, instance=registration)
+        if form.is_valid():
+            form.save()
+            return redirect('accounts:camps_admin') 
+    else:
+        form = form_class(instance=registration)
+
+    return render(request, 'camps/admin/edit_registration.html', {'form': form})
 
 def register_success(request, payment_link):
     # Will require the camp, and the type of registeration

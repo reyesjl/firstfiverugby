@@ -75,7 +75,8 @@ def dashboard(request):
 
 @login_required
 @manager_required
-def camps_summary(request):
+def camps_admin(request):
+    camps = Camp.objects.all()
     registrations = GeneralRegistration.objects.all()
     collapsed = True
 
@@ -100,6 +101,12 @@ def camps_summary(request):
     if paid_filter in ['true', 'false']:
         registrations = registrations.filter(has_paid=(paid_filter == 'true'))
         collapsed = False
+
+    camp_title_filter = request.GET.get('camp_title')
+    if camp_title_filter:
+        registrations = registrations.filter(camp__title__icontains=camp_title_filter)
+        collapsed = False
+    
         
     # Calculate revenue and other statistics
     total_revenue = 0
@@ -118,6 +125,7 @@ def camps_summary(request):
         'total_revenue': total_revenue,
         'total_players': total_players,
         'total_coaches': total_coaches,
+        'camps': camps,
         'collapsed': collapsed,
     }
-    return render(request, 'accounts/camps_summary.html', context)
+    return render(request, 'accounts/camps_admin/camps_overview.html', context)
