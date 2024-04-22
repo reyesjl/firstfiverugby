@@ -140,11 +140,6 @@ USE_TZ = True
 # File Size Limits
 DATA_UPLOAD_MAX_MEMORY_SIZE = 5242880
 
-# Media Storage configuration
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-MEDIA_URL = '/media/'
-
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
@@ -157,6 +152,10 @@ STATICFILES_DIRS = [
 
 # staticfiles
 STATIC_ROOT = BASE_DIR / "staticfiles"
+
+# Media Storage configuration
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field

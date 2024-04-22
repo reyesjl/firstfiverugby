@@ -20,6 +20,9 @@
                 <p class="text-white no-margin-bottom no-margin-top">{{ camp.start_date|date:"F j" }} - {{ camp.end_date|date:"j" }}</p>
                 <h1 class="hero-title ubuntu-regular">{{camp.title}} Rugby Camp</h1>
                 <p class="text-white"><i class="fa-solid fa-location-dot text-white"></i> <a href="https://www.google.com/maps/search/?api=1&query={{ camp.address }}" class="text-white" target="_blank">{{ camp.address }}</a></p>
+                <div class="card-image pb-1 right">
+                    {% if camp.crest %}<img src="{{ camp.crest.url }}" alt="{{ camp.title }} Crest">{% endif %}
+                </div>
                 <div class="text-white right">Player: ${{camp.player_price}} | Coach: ${{camp.coach_price}}</div>
                 <hr>
                 <p class="text-white">{{ camp.details }}</p>
