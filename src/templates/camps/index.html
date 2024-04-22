@@ -43,7 +43,7 @@
                             <p>{{ camp.description }}</p>
                         </div>
                         <div class="card-image pb-1 center">
-                            <img src="{{ camp.crest.url }}" alt="{{ camp.title }} Crest">
+                            {% if camp.crest %}<img src="{{ camp.crest.url }}" alt="{{ camp.title }} Crest">{% endif %}
                         </div>
                         <div class="card-footer">
                             <p class="no-margin-bottom no-margin-top">Date: {{ camp.start_date|date:"F j" }} - {{ camp.end_date|date:"j" }}</p>
