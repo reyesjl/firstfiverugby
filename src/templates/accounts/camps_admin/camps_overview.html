@@ -123,6 +123,8 @@
                             <th>Camp Title</th>
                             <th>Email</th>
                             <th>Type</th>
+                            <th>Photo Release Form</th>
+                            <th>Liability Waiver</th>
                             <th>Paid</th>
                         </tr>
                     </thead>
@@ -134,6 +136,8 @@
                             <td>{{ registration.camp.title }}</td>
                             <td>{{ registration.email }}</td>
                             <td>{{ registration.type }}</td>
+                            <td><a href="{{ registration.photo_release_form.url }}" target="_blank"><i class="fa-solid fa-file-arrow-down"></i></a></td>
+                            <td><a href="{{ registration.liability_waiver.url }}" target="_blank"><i class="fa-solid fa-file-arrow-down"></i></a></td>
                             <td>{% if registration.has_paid %}<i class="fa-regular fa-circle-check text-green"></i>{% else %}<i class="fa-regular fa-circle-xmark text-red"></i>{% endif %}</td>
                         </tr>
                         {% endfor %}
