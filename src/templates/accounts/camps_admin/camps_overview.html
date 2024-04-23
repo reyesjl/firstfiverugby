@@ -130,13 +130,12 @@
                     <tbody>
                         {% for registration in registrations %}
                         <tr data-record-id="{{ registration.id }}">
-                            <td><a href="{% url 'camps:edit_registration' registration.id %}"><i class="fa-solid fa-pencil"></i></a></td>
-                            <td>{{ registration.first_name }}</td>
+                            <td><a href="{% url 'camps:edit_registration' registration.id %}">{{ registration.first_name }}</a></td>
                             <td>{{ registration.last_name }}</td>
                             <td>{{ registration.camp.title }}</td>
                             <td>{{ registration.email }}</td>
                             <td>{{ registration.type }}</td>
-                            <td>{% if registration.has_paid %}Paid{% else %}Not Paid{% endif %}</td>
+                            <td>{% if registration.has_paid %}<i class="fa-regular fa-circle-check text-green"></i>{% else %}<i class="fa-regular fa-circle-xmark text-red"></i>{% endif %}</td>
                         </tr>
                         {% endfor %}
                     </tbody>

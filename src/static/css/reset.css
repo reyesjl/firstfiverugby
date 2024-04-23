@@ -69,6 +69,18 @@ body {
   color: white;
 }
 
+.text-green {
+  color: darkgreen;
+}
+
+.text-red {
+  color: darkred;
+}
+
+.text-yellow {
+  color: darkgoldenrod;
+}
+
 .text-black {
   color: black;
 }
