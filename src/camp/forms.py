@@ -1,5 +1,14 @@
 from django import forms
-from .models import GeneralRegistration
+from .models import GeneralRegistration, Camp
+
+class CampForm(forms.ModelForm):
+    class Meta:
+        model = Camp
+        fields = ['title', 'address', 'description', 'start_date', 'end_date', 'tags', 'details', 'crest', 'coach_price', 'player_price', 'coach_payment_link', 'player_payment_link']
+        widgets = {
+            'start_date': forms.DateInput(attrs={'type': 'date'}),
+            'end_date': forms.DateInput(attrs={'type': 'date'}),
+        }
 
 class PlayerRegistrationForm(forms.ModelForm):
     class Meta:

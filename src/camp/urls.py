@@ -10,4 +10,6 @@ urlpatterns = [
     path('register/<int:camp_id>/<str:register_type>/', views.register, name='register_new'),
     path('register-success/<path:payment_link>/', views.register_success, name='register_success'),
     path('edit-registration/<int:registration_id>/', views.edit_registration, name='edit_registration'),
+    path('manager-panel/', views.manager_panel, name='manager_panel'),
+    path('create/', views.create, name='create'),
 ]

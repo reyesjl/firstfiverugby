@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Camp, GeneralRegistration, CampRegistration, CoachCampRegistration
+from .models import Camp, GeneralRegistration
 
 class CampAdmin(admin.ModelAdmin):
     list_display = ('title', 'start_date', 'end_date')

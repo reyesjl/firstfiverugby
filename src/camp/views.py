@@ -4,7 +4,7 @@ from django.shortcuts import render, redirect
 from .models import Camp, GeneralRegistration
 from account.decorators import manager_required
 from django.contrib.auth.decorators import login_required
-from .forms import PlayerRegistrationForm, CoachRegistrationForm, ModifyPlayerRegistrationForm, ModifyCoachRegistrationForm
+from .forms import PlayerRegistrationForm, CoachRegistrationForm, ModifyPlayerRegistrationForm, ModifyCoachRegistrationForm, CampForm
 
 def index(request):
     all_camps = Camp.objects.order_by('start_date')
@@ -22,6 +22,18 @@ def details(request, camp_id):
         'camp': camp,
     }
     return render(request, 'camps/details.html', context)
+
+@login_required
+@manager_required
+def create(request):
+    if request.method == 'POST':
+        form = CampForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            return redirect('camps:manager_panel')
+    else:
+        form = CampForm()
+    return render(request, 'camps/create.html', {'form': form})
 
 
 def select_camp_role(request, camp_id):
@@ -90,6 +102,16 @@ def register(request, camp_id, register_type):
 
 @login_required
 @manager_required
+def manager_panel(request):
+    all_camps = Camp.objects.order_by('start_date')
+    context = {
+        'camps': all_camps,
+    }
+    return render(request, 'camps/manager/camp_list.html', context)
+
+
+@login_required
+@manager_required
 def edit_registration(request, registration_id):
     try:
         registration = GeneralRegistration.objects.get(pk=registration_id)
@@ -113,7 +135,7 @@ def edit_registration(request, registration_id):
     else:
         form = form_class(instance=registration)
 
-    return render(request, 'camps/admin/edit_registration.html', {'form': form})
+    return render(request, 'camps/manager/edit_registration.html', {'form': form})
 
 def register_success(request, payment_link):
     # Will require the camp, and the type of registeration
