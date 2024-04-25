@@ -4,6 +4,10 @@
 
 <!-- load the static tag -->
 {% load static %}
+
+<!-- load the markdown filter -->
+{% load markdown_filter %}
+
 {% block css %}
     <link rel="stylesheet" href="{% static 'css/f5rugby/index.css' %}">
     <link rel="stylesheet" href="{% static 'css/blog/detail.css' %}">
@@ -29,7 +33,7 @@
     <div class="row">
         <div class="col-12">
             <div class="article-content pt-3 pb-3">
-                {{ article.content }}
+                {{ article.content | markdown | safe }}
             </div>
         </div>
     </div>
