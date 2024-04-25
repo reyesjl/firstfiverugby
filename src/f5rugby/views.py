@@ -2,8 +2,13 @@
 # author: jose
 # date: April 02, 2024
 
+import os
+import hmac
+import hashlib
+from dotenv import load_dotenv
 import logging
 import subprocess
+from django.contrib import messages
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.views.decorators.csrf import csrf_exempt
@@ -29,8 +34,30 @@ def success_page(request):
 
 @csrf_exempt
 def webhook_handler(request):
+    load_dotenv()
+    GITHUB_SECRET = os.getenv('GITHUB_SECRET')
     if request.method == 'POST':
         logger.info('Webhook received')
+
+        # Verify the signature
+        signature = request.headers.get('X-Hub-Signature')
+        if not signature:
+            logger.error('Missing X-Hub-Signature header')
+            messages.error(request, 'Missing X-Hub-Signature header')
+            return render(request, 'f5rugby/nice_try.html')
+        
+        sha_name, signature = signature.split('=')
+        if sha_name != 'sha1':
+            logger.error('Invalid signature algorithm')
+            messages.error(request, 'Invalid signature algorithm')
+            return render(request, 'f5rugby/nice_try.html')
+        
+        mac = hmac.new(GITHUB_SECRET.encode('utf-8'), msg=request.body, digestmod=hashlib.sha1)
+        if not hmac.compare_digest(str(mac.hexdigest()), str(signature)):
+            logger.error('Invalid signature')
+            messages.error(request, 'Invalid signature')
+            return render(request, 'f5rugby/nice_try.html')
+        
         try:
             # Execute git pull
             subprocess.Popen(['/home/reyesjl/django_sites/auto_update.sh'])
