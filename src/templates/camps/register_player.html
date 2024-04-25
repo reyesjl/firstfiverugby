@@ -19,10 +19,12 @@
         <div class="row">
             <div class="col-8">
                 <h1 class="hero-title ubuntu-regular">{{ camp.title }} Camp Registration</h1>
+                {% comment %}
                 <p class="text-white">All {{type_string}} must download and sign the photo release and liability waiver to attend the camp. Then proceed to payment.</p>
                 <p class="ubuntu-light text-white">*Boys Ages 13-18 invited.</p>
                 <p><a class="link light" href="{% static 'docs/photo_release_2024.pdf' %}" download>1. Photo Release PDF ></a></p>
                 <p><a class="link light" href="{% static 'docs/liability_form_2024.pdf' %}" download>2. Liability Waiver PDF ></a></p>
+                {% endcomment %}
             </div>
         </div>
     </div>
