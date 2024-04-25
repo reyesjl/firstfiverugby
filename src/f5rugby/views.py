@@ -69,4 +69,5 @@ def webhook_handler(request):
         return HttpResponse('Webhook received', status=200)
     else:
         logger.warning('Method not allowed')
-        return HttpResponse('Method not allowed', status=405)
+        messages.error(request, 'Have a nice day :)')
+        return render(request, 'f5rugby/nice_try.html')
