@@ -27,6 +27,19 @@
         </div>
     </div>
 </div>
+<div class="section-strip light tour-archive">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <video width="100%" class="tour-video" controls autoplay loop muted playsinline>
+                    <source src="{% static 'videos/camps/camp-archives-2024.mp4' %}" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <p class="video-subtitle center">Rugby Camps</p>
+            </div>
+        </div>
+    </div>
+</div>
 <div class="section-strip camps-wrapper">
     <div class="container">
         <div class="row">
@@ -70,77 +83,120 @@
         </div>
     </div>
 </div>
-<div class="section-strip section-strip-light tours-wrapper">
+<div class="section-strip light">
     <div class="container">
-        <div class="row">
-            <div class="col-5">
-                <div class="section-image-wrapper">
-                    <div class="section-image">
-                        <img alt="cardiff blues crest" src="{% static 'images/camps/cardiff-blues-logo.png' %}">
-                    </div>
-                </div>
-            </div>
+        <div class="row pt-1">
             <div class="col-7">
-                <h1 class="section-title ubuntu-light">The Cardiff Blues</h1>
-                <p class="subtitle">Welsh rugby. Showcasing skill, determination, and the spirit of the game.</p>
-                <p>The Cardiff Blues Rugby team, based in Cardiff, Wales, competes in the United Rugby Championship.</p>
-                <p>Established in 1876, they've become renowned for producing talented players who often represent Wales and contribute to British and Irish Lions tours.</p>
-                <p><a class="link dark" href="https://www.cardiffrugby.wales/">More about Cardiff Blues ></a></p>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="section-strip health-wrapper">
-    <div class="container">
-        <div class="row">
-            <div class="col-5 hidden-lg">
-                <div class="section-image-wrapper">
-                    <div class="section-image">
-                        <img src="{% static 'images/camps/andy-skehan-profile.png' %}">
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-7">
-                <h1 class="section-title ubuntu-light">Andy Skehan</h1>
-                <p class="subtitle">Attention to detail enhances a player's journey.</p>
-                <p>Andy Skehan is a seasoned rugby coach known for his professionalism.</p>
-
-                <ul class="section-strip inline-list">
-                    <li class="inline-list-item"><i class="fa-regular fa-circle-check"></i> Managed diverse rugby program with 19 teams and 35+ coaches.</li>
-                    <li class="inline-list-item"><i class="fa-regular fa-circle-check"></i> Recognized for fostering winning cultures and developing talented players.</li>
-                    <li class="inline-list-item"><i class="fa-regular fa-circle-check"></i> Praised for clear communication, attention to detail, and ability to elevate team performance.</li>
-                </ul>
-
-                <p><a class="link dark" href="https://twitter.com/andyskehan?lang=en">More about Andy ></a></p>
-            </div>
-            <div class="col-5 hidden-sm">
-                <div class="section-image-wrapper">
-                    <div class="section-image">
-                        <img src="{% static 'images/camps/andy-skehan-profile.png' %}">
-                    </div>
+                <p>Explore the staff profiles.</p>
+                <div class="tabs">
+                    <button class="button primary tab-back">Back</button>
+                    <button class="button primary tab-next">Next</button>
                 </div>
             </div>
         </div>
     </div>
-</div>
-<div class="section-strip section-strip-light tour-archive">
-    <div class="container">
-        <div class="row">
-            <div class="col-7">
-                <h1 class="section-title ubuntu-light">Camp Archives</h1>
-                <p>Enjoy some moments from previous rugby camps!</p>
+    <div id="1" class="section-strip light tab-content active tours-wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-5">
+                    <div class="section-image-wrapper">
+                        <div class="section-image">
+                            <!-- Replace the image source with the appropriate image URL -->
+                            <img alt="Dai Rees" src="{% static 'images/camps/staff/rees.png' %}">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-7">
+                    <h1 class="section-title ubuntu-light">Dai Rees</h1>
+                    <p class="subtitle">From the Cardiff Blues</p>
+                    <!-- Replace the paragraphs with Dai Rees' bio -->
+                    <p>Dai is a level 4 coach and former head coach of Wales u20. He was the longtime Director of Rugby at the Hong Kong Rugby Union and Head of Academy at the Dragons in Wales.</p>
+                </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-12">
-                <video width="100%" class="tour-video" controls autoplay loop muted playsinline>
-                    <source src="{% static 'videos/camps/camp-archives-2024.mp4' %}" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-                <p class="video-subtitle center">Rugby Camps</p>
+    </div>
+    <div id="2" class="section-strip light tab-content health-wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-5 hidden-lg">
+                    <div class="section-image-wrapper">
+                        <div class="section-image">
+                            <img alt="Andy Skehan" src="{% static 'images/camps/staff/skehan.png' %}">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-7">
+                    <h1 class="section-title ubuntu-light">Andy Skehan</h1>
+                    <p class="subtitle">Attention to detail enhances a player's journey.</p>
+                    <p>Andy Skehan is a seasoned rugby coach known for his professionalism.</p>
+
+                    <ul class="section-strip inline-list">
+                        <li class="inline-list-item"><i class="fa-regular fa-circle-check"></i> Managed diverse rugby program with 19 teams and 35+ coaches.</li>
+                        <li class="inline-list-item"><i class="fa-regular fa-circle-check"></i> Recognized for fostering winning cultures and developing talented players.</li>
+                        <li class="inline-list-item"><i class="fa-regular fa-circle-check"></i> Praised for clear communication, attention to detail, and ability to elevate team performance.</li>
+                    </ul>
+                </div>
+                <div class="col-5 hidden-sm">
+                    <div class="section-image-wrapper">
+                        <div class="section-image">
+                            <img alt="Andy Skehan" src="{% static 'images/camps/staff/skehan.png' %}">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="3" class="section-strip light tab-content active tours-wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-5">
+                    <div class="section-image-wrapper">
+                        <div class="section-image">
+                            <!-- Replace the image source with the appropriate image URL -->
+                            <img alt="Tim Brown" src="{% static 'images/camps/staff/timbo.png' %}">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-7">
+                    <h1 class="section-title ubuntu-light">Tim Brown</h1>
+                    <p class="subtitle">Former USA All American U23 Player</p>
+                    <!-- Replace the paragraphs with Dai Rees' bio -->
+                    <p>He was the first employee of Old Glory DC and ran the most successful u19 academy in MLR for almost 5 years.  Currently works for World Rugby Shop and with the University of Mary Washington in the Rugby East.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="4" class="section-strip light tab-content health-wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-5 hidden-lg">
+                    <div class="section-image-wrapper">
+                        <div class="section-image">
+                            <img alt="Joseph Ritter" src="{% static 'images/camps/staff/ritter.png' %}">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-7">
+                    <h1 class="section-title ubuntu-light">Joseph Ritter</h1>
+                    <p class="subtitle">Pathways player</p>
+                    <p>Joseph played 4 years of Varsity Rugby at Mary Washington after attending Crusaders Academy while in HS.  He also was part of Old Glory's Academy and has coached with Fort Hunt u19's. </p>
+                </div>
+                <div class="col-5 hidden-sm">
+                    <div class="section-image-wrapper">
+                        <div class="section-image">
+                            <img alt="Joseph Ritter" src="{% static 'images/camps/staff/ritter.png' %}">
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </div>
+{% endblock %}
+
+<!-- Custom JavaScript tags -->
+{% block js %}
+<script src="{% static 'js/camps/index.js' %}"></script>
 {% endblock %}

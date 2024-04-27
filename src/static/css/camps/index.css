@@ -7,3 +7,16 @@
     color: gray;
     font-style: italic;
 }
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.section-image img {
+    border-radius: 50%;
+    background-color: lightgray;
+}
