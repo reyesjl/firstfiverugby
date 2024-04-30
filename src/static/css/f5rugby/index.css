@@ -32,7 +32,7 @@
 }
 
 .ireland-background {
-    background-image: url('/static/images/tours/ireland-bg.jpg');
+    background-image: url('/static/images/tours/tours-bg.jpg');
     background-size: cover; /* Adjust as needed */
     background-position: center; /* Adjust as needed */
 }
