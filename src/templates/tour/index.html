@@ -21,7 +21,7 @@
             <div class="col-8">
                 <div class="hero-solid-content">
                     <h1 class="hero-title ubuntu-regular">Ireland Team Tours at an Incredible Price</h1>
-                    <p class="ubuntu-light text-white">Check out the video below of previous tours!</p>
+                    <p class="ubuntu-light text-white">Check out the <a class="link underlined text-white" href="https://www.youtube.com/watch?v=OS2hR3MEYD4">video</a> of previous tours!</p>
                     <p><a class="button primary" href="{% url 'tour:tour_quote' %}">Free Quote</a></p>
                 </div>
             </div>
@@ -50,7 +50,7 @@
             <div class="col-5 hidden-lg">
                 <div class="section-image-wrapper">
                     <div class="section-image">
-                        <img src="{% static 'images/tours/cities.png' %}">
+                        <img src="{% static 'images/tours/overnight.png' %}">
                     </div>
                 </div>
             </div>
@@ -66,7 +66,7 @@
             <div class="col-5 hidden-sm">
                 <div class="section-image-wrapper">
                     <div class="section-image">
-                        <img src="{% static 'images/tours/cities.png' %}">
+                        <img src="{% static 'images/tours/overnight.png' %}">
                     </div>
                 </div>
             </div>
@@ -79,7 +79,7 @@
             <div class="col-5">
                 <div class="section-image-wrapper">
                     <div class="section-image">
-                        <img src="{% static 'images/tours/history.png' %}">
+                        <img src="{% static 'images/tours/ruins.png' %}">
                     </div>
                 </div>
             </div>
@@ -102,7 +102,7 @@
             <div class="col-5 hidden-lg">
                 <div class="section-image-wrapper">
                     <div class="section-image">
-                        <img src="{% static 'images/tours/cliffs.png' %}">
+                        <img src="{% static 'images/tours/progame.png' %}">
                     </div>
                 </div>
             </div>
@@ -114,7 +114,6 @@
                     <li class="inline-list-item"><i class="fa-regular fa-circle-check"></i> Walking tour through Medieval Galway.</li>
                     <li class="inline-list-item"><i class="fa-regular fa-circle-check"></i> Kylemore Abbey.</li>
                     <li class="inline-list-item"><i class="fa-regular fa-circle-check"></i> St John's castle.</li>
-                    <li class="inline-list-item"><i class="fa-regular fa-circle-check"></i> Rugby Experience Museum.</li>
                     <li class="inline-list-item"><i class="fa-regular fa-circle-check"></i> Guided tour of Blarney Castle & Gardens.</li>
                     <li class="inline-list-item"><i class="fa-regular fa-circle-check"></i> Tour of University College Cork.</li>
                     <li class="inline-list-item"><i class="fa-regular fa-circle-check"></i> Irish Museum of Natural History.</li>
@@ -126,22 +125,32 @@
             <div class="col-5 hidden-sm">
                 <div class="section-image-wrapper">
                     <div class="section-image">
-                        <img src="{% static 'images/tours/cliffs.png' %}">
+                        <img src="{% static 'images/tours/progame.png' %}">
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
-<div class="section-strip light tour-archive">
+<div class="section-strip light tours-wrapper">
     <div class="container">
         <div class="row">
-            <div class="col-12">
-                <video class="tour-video" controls autoplay loop muted playsinline>
-                    <source src="{% static 'videos/tours/tour-archives-2024.mp4' %}" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-                <p class="video-subtitle center">Ireland Tours</p>
+            <div class="col-5">
+                <div class="section-image-wrapper">
+                    <div class="section-image">
+                        <img src="{% static 'images/tours/videoroom.png' %}">
+                    </div>
+                </div>
+            </div>
+            <div class="col-7">
+                <h1 class="section-title ubuntu-light">Rugby Experience Museum</h1>
+                <p class="subtitle">Travel from grassroots to legendary status.</p>
+
+                <ul class="section-strip inline-list">
+                    <li class="inline-list-item"><i class="fa-regular fa-circle-check"></i> Fully immersive and interactive experience.</li>
+                    <li class="inline-list-item"><i class="fa-regular fa-circle-check"></i> Visit 6 inspiring zones rooted in World Rugby's values.</li>
+                    <li class="inline-list-item"><i class="fa-regular fa-circle-check"></i> Must see in Irelands rugby heartland!</li>
+                </ul>
             </div>
         </div>
     </div>
