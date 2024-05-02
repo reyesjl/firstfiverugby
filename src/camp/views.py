@@ -42,6 +42,39 @@ def select_camp_role(request, camp_id):
     }
     return render(request, 'camps/select_role.html', context)
 
+def register_stripe(request, camp_id, register_type):
+    payment_link = ''
+    camp = None
+    type_string = ''
+    
+    # Check if camp exists
+    try:
+        camp = Camp.objects.get(pk=camp_id)
+    except Camp.DoesNotExist:
+        messages.error(request, 'This camp does not exist.')
+        return render(request, 'f5rugby/error.html')
+
+    # Get the registration type from query parameters
+    if register_type not in ['player', 'coach']:
+        messages.error(request, 'Invalid register type.')
+        return render(request, 'f5rugby/error.html')
+
+    # Determine the form based on the registration type
+    if register_type == 'player':
+        payment_link = camp.player_payment_link
+        type_string = 'players'
+    elif register_type == 'coach':
+        form = CoachRegistrationForm(request.POST or None)
+        payment_link = camp.coach_payment_link
+        type_string = 'coaches'
+
+    context = {
+        'camp': camp,
+        'type_string': type_string,
+        'payment_link': payment_link,
+    }
+    return redirect(payment_link)
+
 def register(request, camp_id, register_type):
     payment_link = ''
     template_name = ''
