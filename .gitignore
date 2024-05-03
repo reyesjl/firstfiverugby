@@ -22,3 +22,4 @@ staticfiles/
 # Temp files
 health_files/
 camp_files/
+media/
