@@ -1,4 +1,5 @@
 @import url(https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap);
 
 body {
   margin: 0;
@@ -160,15 +161,34 @@ body {
   text-decoration: none;
 }
 
+.button.large {
+  padding: calc(.4rem - 1px) 1.2rem;
+  font-size: 1.2rem;
+}
+
 .button.primary {
   background-color: #0e8420;
   border-color: #0e8420;
   color: #fff;
 }
 
+.button.secondary {
+  background-color: black;
+  border-color: darkred;
+  color: white;
+}
+
 .button.primary:hover {
   background-color: #0c6d1a;
   border-color: #0c6d1a;
+}
+
+.button.secondary:hover {
+  background-color: darkred;
+}
+
+.round {
+  border-radius: 20px;
 }
 
 .button.clear {
@@ -232,7 +252,71 @@ body {
   cursor: default; /* Change cursor to default */
 }
 
+/* Backgrounds */
+.red-background {
+    background-color: #772929;
+    background-image: linear-gradient(to bottom left, rgba(119, 41, 41, 0.16) 0, rgba(119, 41, 41, 0.16) 49.9%, transparent 50%), linear-gradient(to bottom right, rgba(228, 228, 228, 0.5) 0, rgba(228, 228, 228, 0.5) 49.9%, transparent 50%), linear-gradient(to top left, white 0%, white 49.3%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0) 100%), linear-gradient(-89deg, #e92020 0%, #772929 42%, #2c0000 94%);
+    background-blend-mode: multiply, multiply, normal, normal;
+    background-position: top right, top left, right bottom -1px, left top;
+    background-repeat: no-repeat;
+    background-size: 74% 99.83%, 68% 91%, 103.8% 20.26%, 100% 99.8%;
+}
+
+.red-right-background {
+    background-blend-mode: multiply, multiply, normal;
+    background-image: linear-gradient(150deg, rgba(228, 228, 228, 0.54) 0%, rgba(228, 228, 228, 0.54) 54.9%, rgba(228, 228, 228, 0) 55%, rgba(228, 228, 228, 0) 100%), linear-gradient(to bottom left, rgba(216, 216, 216, 0.54) 0%, rgba(216, 216, 216, 0.54) 49.9%, rgba(216, 216, 216, 0) 50%, rgba(216, 216, 216, 0) 100%), linear-gradient(-89deg, #e92020 0%, #772929 42%, #2c0000 94%);
+    background-position: bottom left, bottom 0 right, 0% 0%;
+    background-repeat: no-repeat;
+    background-size: 100% 100%, 60% 100%, auto;
+}
+
+.blue-right-background {
+    background-blend-mode: multiply, multiply, normal;
+    background-image: linear-gradient(150deg, rgba(228, 228, 228, 0.54) 0%, rgba(228, 228, 228, 0.54) 54.9%, rgba(228, 228, 228, 0) 55%, rgba(228, 228, 228, 0) 100%), linear-gradient(to bottom left, rgba(216, 216, 216, 0.54) 0%, rgba(216, 216, 216, 0.54) 49.9%, rgba(216, 216, 216, 0) 50%, rgba(216, 216, 216, 0) 100%), linear-gradient(-89deg, #202de9 0%, #292e77 42%, #00002c 94%);
+    background-position: bottom left, bottom 0 right, 0% 0%;
+    background-repeat: no-repeat;
+    background-size: 100% 100%, 60% 100%, auto;
+}
+
+.green-right-background {
+    background-blend-mode: multiply, multiply, normal;
+    background-image: linear-gradient(150deg, rgba(228, 228, 228, 0.54) 0%, rgba(228, 228, 228, 0.54) 54.9%, rgba(228, 228, 228, 0) 55%, rgba(228, 228, 228, 0) 100%), linear-gradient(to bottom left, rgba(216, 216, 216, 0.54) 0%, rgba(216, 216, 216, 0.54) 49.9%, rgba(216, 216, 216, 0) 50%, rgba(216, 216, 216, 0) 100%), linear-gradient(-89deg, #3ee920 0%, #29772c 42%, #072c00 94%);
+    background-position: bottom left, bottom 0 right, 0% 0%;
+    background-repeat: no-repeat;
+    background-size: 100% 100%, 60% 100%, auto;
+}
+
+.ireland-background {
+    background-image: url('/static/images/tours/tours-bg.jpg');
+    background-size: cover; /* Adjust as needed */
+    background-position: center; /* Adjust as needed */
+}
+
+.camps-background {
+    background-image: url('/static/images/camps/camps-bg2.jpg');
+    background-size: cover; /* Adjust as needed */
+    background-position: center; /* Adjust as needed */
+}
+
+.health-background {
+    background-image: url('/static/images/health/health-bg.jpg');
+    background-size: cover; /* Adjust as needed */
+    background-position: center; /* Adjust as needed */
+}
+
+.blog-background {
+    background-image: url('/static/images/blog/blog-bg.jpg');
+    background-size: cover; /* Adjust as needed */
+    background-position: center; /* Adjust as needed */
+}
+
 /* Fonts*/
+.archivo {
+  font-family: "Archivo Black", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 .ubuntu-light {
   font-family: "Ubuntu", sans-serif;
   font-weight: 300;

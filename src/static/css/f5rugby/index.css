@@ -1,62 +1,73 @@
-.red-background {
-    background-color: #772929;
-    background-image: linear-gradient(to bottom left, rgba(119, 41, 41, 0.16) 0, rgba(119, 41, 41, 0.16) 49.9%, transparent 50%), linear-gradient(to bottom right, rgba(228, 228, 228, 0.5) 0, rgba(228, 228, 228, 0.5) 49.9%, transparent 50%), linear-gradient(to top left, white 0%, white 49.3%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0) 100%), linear-gradient(-89deg, #e92020 0%, #772929 42%, #2c0000 94%);
-    background-blend-mode: multiply, multiply, normal, normal;
-    background-position: top right, top left, right bottom -1px, left top;
-    background-repeat: no-repeat;
-    background-size: 74% 99.83%, 68% 91%, 103.8% 20.26%, 100% 99.8%;
-}
-
-.red-right-background {
-    background-blend-mode: multiply, multiply, normal;
-    background-image: linear-gradient(150deg, rgba(228, 228, 228, 0.54) 0%, rgba(228, 228, 228, 0.54) 54.9%, rgba(228, 228, 228, 0) 55%, rgba(228, 228, 228, 0) 100%), linear-gradient(to bottom left, rgba(216, 216, 216, 0.54) 0%, rgba(216, 216, 216, 0.54) 49.9%, rgba(216, 216, 216, 0) 50%, rgba(216, 216, 216, 0) 100%), linear-gradient(-89deg, #e92020 0%, #772929 42%, #2c0000 94%);
-    background-position: bottom left, bottom 0 right, 0% 0%;
-    background-repeat: no-repeat;
-    background-size: 100% 100%, 60% 100%, auto;
-}
-
-.blue-right-background {
-    background-blend-mode: multiply, multiply, normal;
-    background-image: linear-gradient(150deg, rgba(228, 228, 228, 0.54) 0%, rgba(228, 228, 228, 0.54) 54.9%, rgba(228, 228, 228, 0) 55%, rgba(228, 228, 228, 0) 100%), linear-gradient(to bottom left, rgba(216, 216, 216, 0.54) 0%, rgba(216, 216, 216, 0.54) 49.9%, rgba(216, 216, 216, 0) 50%, rgba(216, 216, 216, 0) 100%), linear-gradient(-89deg, #202de9 0%, #292e77 42%, #00002c 94%);
-    background-position: bottom left, bottom 0 right, 0% 0%;
-    background-repeat: no-repeat;
-    background-size: 100% 100%, 60% 100%, auto;
-}
-
-.green-right-background {
-    background-blend-mode: multiply, multiply, normal;
-    background-image: linear-gradient(150deg, rgba(228, 228, 228, 0.54) 0%, rgba(228, 228, 228, 0.54) 54.9%, rgba(228, 228, 228, 0) 55%, rgba(228, 228, 228, 0) 100%), linear-gradient(to bottom left, rgba(216, 216, 216, 0.54) 0%, rgba(216, 216, 216, 0.54) 49.9%, rgba(216, 216, 216, 0) 50%, rgba(216, 216, 216, 0) 100%), linear-gradient(-89deg, #3ee920 0%, #29772c 42%, #072c00 94%);
-    background-position: bottom left, bottom 0 right, 0% 0%;
-    background-repeat: no-repeat;
-    background-size: 100% 100%, 60% 100%, auto;
-}
-
-.ireland-background {
-    background-image: url('/static/images/tours/tours-bg.jpg');
-    background-size: cover; /* Adjust as needed */
-    background-position: center; /* Adjust as needed */
-}
-
-.camps-background {
-    background-image: url('/static/images/camps/camps-bg2.jpg');
-    background-size: cover; /* Adjust as needed */
-    background-position: center; /* Adjust as needed */
-}
-
-.health-background {
-    background-image: url('/static/images/health/health-bg.jpg');
-    background-size: cover; /* Adjust as needed */
-    background-position: center; /* Adjust as needed */
-}
-
-.blog-background {
-    background-image: url('/static/images/blog/blog-bg.jpg');
-    background-size: cover; /* Adjust as needed */
-    background-position: center; /* Adjust as needed */
-}
-
 .hero-wrapper {
     padding: 6rem 0 4rem 0;
+}
+
+.section-jumbo {
+    background: rgba(0, 0, 0, 0.6);
+    overflow: hidden;
+    min-height: 100vh;
+    position: relative;
+}
+
+.sub-jumbo-title {
+    background-color: darkred;
+    padding: 20px;
+    color: white;
+    margin: 0;
+    width: fit-content;
+}
+
+.jumbotron {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    min-height: 100vh;
+    position: relative;
+}
+
+.jumbo-content {
+    z-index: 1;
+    color: white;
+}
+
+.jumbo-title {
+    font-size: 3.5em;
+    letter-spacing: .3em;
+    text-transform: uppercase;
+    color: white;
+    margin: 0;
+}
+
+.smaller-title {
+    font-size: 3em;
+    margin: 0;
+}
+
+.chevron-down {
+    position: absolute;
+    bottom: 5vh;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.video-bg {
+    position: absolute;
+    min-width: 100%;
+    min-height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.image-bg {
+    position: absolute;
+    min-width: 100%;
+    min-height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
 }
 
 .hero-solid-content {
@@ -121,6 +132,11 @@
     .logo-item {
         display: inline-block;
         height: 64px;
+    }
+
+    .sub-jumbo-title {
+        font-size: 1.4rem;
+        margin: 0 auto;
     }
 }
 
