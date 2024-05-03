@@ -173,9 +173,10 @@ body {
 }
 
 .button.secondary {
-  background-color: black;
-  border-color: darkred;
+  background-color: darkgreen;
+  border-color: black;
   color: white;
+  font-weight: bold;
 }
 
 .button.primary:hover {
@@ -184,7 +185,8 @@ body {
 }
 
 .button.secondary:hover {
-  background-color: darkred;
+  background-color: rgb(255, 255, 255);
+  color: darkgreen;
 }
 
 .round {
