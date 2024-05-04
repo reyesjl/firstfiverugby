@@ -19,7 +19,6 @@
 
 .jumbotron {
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
     background: rgba(0, 0, 0, 0.5);
@@ -34,11 +33,12 @@
 }
 
 .jumbo-title {
+    margin: 0;
     font-size: 3.5em;
     letter-spacing: .3em;
     text-transform: uppercase;
     color: white;
-    margin: 0;
+    margin-top: 20%;
 }
 
 .jumbo-button {
@@ -55,22 +55,21 @@
     margin: 2rem 0;
     padding: 0;
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
-}
-
-.action-item {
-    margin-top: 3rem;
+    text-align: center;
 }
 
 .action-link {
-    padding: 12px 20px;
+    display: block;
+    width: 80%;
+    padding: 10px 20px;
     background: white;
     text-decoration: none;
     color: black;
     border-radius: 25px;
     transition: all;
     transition-duration: .3s;
+    margin: 0 auto;
 }
 
 .action-link:hover {

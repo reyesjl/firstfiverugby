@@ -15,17 +15,20 @@
 {% block content %}
 <div class="jumbotron">
     <div class="container">
-        <div class="center">
-            <h1 class="jumbo-title center">First Five</h1>
-            <p class="subtitle text-white">The premier destination to grow the game of rugby.</p>
+        <div class="jumbotron-content">
+            <div class="row center">
+                <div class="col-12">
+                    <h1 class="jumbo-title">First Five</h1>
+                    <p class="subtitle text-white">The premier destination to grow the game of rugby.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-3 center"><a class="action-link" href="{% url 'camps:index' %}">Rugby Camps</a></div>
+                <div class="col-3 center"><a class="action-link" href="{% url 'tour:index' %}">Ireland Tours</a></div>
+                <div class="col-3 center"><a class="action-link deactivated" href="{% url 'tour:index' %}">Retro Jerseys</a></div>
+                <div class="col-3 center"><a class="action-link" href="{% url 'health:index' %}">Health Plans</a></div>
+            </div>
         </div>
-        
-            <ul class="action-list center">
-                <li class="action-item"><a class="action-link" href="{% url 'tour:index' %}">Ireland Tours</a></li>
-                <li class="action-item"><a class="action-link" href="{% url 'camps:index' %}">Rugby Camps</a></li>
-                <li class="action-item"><a class="action-link deactivated" href="#">Retro Jerseys</a></li>
-                <li class="action-item"><a class="action-link" href="{% url 'health:index' %}">Player Health</a></li>
-            </ul>
     </div>
     <img class="image-bg" src="{% static 'images/f5rugby/jumbo-bg.jpg' %}" />
 </div>
