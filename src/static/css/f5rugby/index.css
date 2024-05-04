@@ -65,10 +65,13 @@
     background: white;
     text-decoration: none;
     color: black;
-    border-radius: 25px;
+    border-radius: 8px;
+    font-weight: bold;
     transition: all;
     transition-duration: .3s;
     margin: 0 auto;
+    text-transform: uppercase;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .action-link:hover {
