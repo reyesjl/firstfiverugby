@@ -16,82 +16,12 @@
 <div class="jumbotron">
     <div class="center">
         <div>
-            <h1 class="jumbo-title center archivo">First Five</h1>
-            <p class="subtitle text-white">The ultimate rugby platform.</p>
-        </div>
-        <div class="chevron-down">
-            <p class="subtitle text-white"><i class="fa-solid fa-chevron-down"></i></p>
+            <h1 class="jumbo-title center">First Five</h1>
+            <p class="subtitle text-white">The premier destination to grow the game of rugby.</p>
         </div>
     </div>
     <video class="video-bg" autoplay loop muted playsinline>
         <source src="media/videos/home-video-2.mp4" type="video/mp4">
     </video>
-</div>
-<div class="section">
-    <div class="row">
-        <a href="{% url 'camps:index' %}">
-            <img width="100%" src="{% static 'images/camps/camps-banner.png' %}" />
-        </a>
-    </div>
-</div>
-<div class="section pt-3 pb-3">
-    <div class="container">
-        <div class="row">
-            <div class="center col-10">
-                <h2 class="smaller-title center text-red">The premier destination to grow the game of rugby.</h2>
-            </div>
-        </div>
-        <div class="row center pt-2">
-            <div class="col-3 col-6-sm"><a class="button large secondary round" href="{% url 'tour:index' %}">Ireland Tours</a></div>
-            <div class="col-3 col-6-sm"><a class="button large secondary round" href="{% url 'camps:index' %}">Rugby Camps</a></div>
-            <div class="col-3 col-6-sm"><a class="button large secondary round" href="#">Retro Jerseys</a></div>
-            <div class="col-3 col-6-sm"><a class="button large secondary round" href="{% url 'health:index' %}">1-on-1 Training</a></div>
-        </div>
-    </div>
-</div>
-<div class="section-jumbo">
-    <div class="container">
-        <h1 class="sub-jumbo-title text-white">Ireland Team Tours</h1>
-        <div class="row">
-            <div class="col-7">
-                <p class="text-white">Stay in walkable town centers, explore the country with our historically trained bus drivers. Visit Galway, Connemara, Cork, Kilkenny & Rugby rich Dublin. Each day includes rugby, history, and team building. Landmarks include Kylemore Abbey, St John's Castle, Cliffs of Moher, and more!</p>
-                <p><a class="button primary" href="{% url 'tour:tour_quote' %}">Free Quote</a></p>
-            </div>
-        </div>
-    </div>
-    <img class="image-bg" src="{% static 'images/f5rugby/ireland.jpg' %}" />
-</div>
-<div class="section-jumbo">
-    <div class="container">
-        <h1 class="sub-jumbo-title text-white">Rugby Camps</h1>
-        <div class="row">
-            <div class="col-7">
-                <p class="text-white">Full time professional rugby coaches. Hundreds of repetitions with direct feedback for the players. Focus on seeing the entire pitch and understanding the game. Everyday there are free prizes as well as free camp t-shirts and more rewards.</p>
-            </div>
-            <div class="col-12">
-                <p><a class="text-white underlined" href="{% url 'camps:index' %}">Register for camps ></a></p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-4">
-                <a href="">
-                    <img width="100%" src="{% static 'images/f5rugby/kit-promo.jpg' %}" />
-                </a>
-            </div>
-        </div>
-    </div>
-    <img class="image-bg" src="{% static 'images/f5rugby/camps-promo.jpg' %}" />
-</div>
-<div class="section-jumbo">
-    <div class="container">
-        <h1 class="sub-jumbo-title text-white">Health & Fitness</h1>
-        <div class="row">
-            <div class="col-7">
-                <p class="text-white">Learn about nutrition, speed, and strength training from our custom community plans. Meet 1-on-1 with a professional to discuss your goals. Certified plans for all levels of training. Access easy to follow meal plans and see our daily workouts. We evaluate your current workout plan for free!</p>
-                <p><a class="button primary" href="{% url 'health:fitness_evaluation' %}">Free Evaluation</a></p>
-            </div>
-        </div>
-    </div>
-    <img class="image-bg" src="{% static 'images/f5rugby/health-promo.jpg' %}" />
 </div>
 {% endblock %}

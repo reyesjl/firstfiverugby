@@ -18,7 +18,7 @@ from camp.models import Camp
 logger = logging.getLogger(__name__)
 
 def index(request):
-    return render(request, 'f5rugby/index-new.html', context={})
+    return render(request, 'f5rugby/index.html', context={})
 
 def camps(request):
     all_camps = Camp.objects.order_by('start_date')
