@@ -20,6 +20,9 @@ logger = logging.getLogger(__name__)
 def index(request):
     return render(request, 'f5rugby/index.html', context={})
 
+def preview(request):
+    return render(request, 'f5rugby/preview.html', context={})
+
 def camps(request):
     all_camps = Camp.objects.order_by('start_date')
     context = {'camps': all_camps}

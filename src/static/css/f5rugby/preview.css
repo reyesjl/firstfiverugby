@@ -1,0 +1,90 @@
+.jumbotron {
+    border-radius: 12px;
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(90deg, black, #ff0000b0, black);
+    position: relative;
+    margin-top: 40px;
+    box-shadow: 2.2px 4.5px 4.5px hsl(0deg 0% 0% / 0.43);
+}
+
+.jumbo-content {
+    padding: 0 1.2rem;
+}
+
+.slider-control {
+    position: absolute;
+    font-size: 1.5em;
+}
+
+.slider-control:hover {
+    cursor: pointer;
+}
+
+.slider-back {
+    left: 1rem;
+}
+
+.slider-next {
+    right: 1rem;
+}
+
+.featured-box {
+    display: block;
+    border-radius: 8px;
+    background-color: rgb(14, 14, 14);
+    min-height: 100px;
+    box-shadow: 2.2px 4.5px 4.5px hsl(0deg 0% 0% / 0.43);
+    text-decoration: none;
+    background: linear-gradient(90deg, black, #ff0000b0, black);
+}
+
+.featured-box.larger {
+    min-height: 170px;
+}
+
+.box-title {
+    font-size: 1.2rem;
+    color: white;
+    padding: .75rem 3%;
+}
+
+.section {
+    padding: 1.4rem 0;
+}
+
+.section-title {
+    font-weight: bold;
+    font-size: 2rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: .5rem 2%;
+}
+
+.section-subtitle {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.section-image {
+    padding: 0;
+    border-radius: 8px;
+    box-shadow: 2.2px 4.5px 4.5px hsl(0deg 0% 0% / 0.43);
+}
+
+.vertical-center {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.image-buttons {
+    display: flex;
+    justify-content: space-between;
+    padding: .75rem 1rem;
+}
+
+.image-button:hover {
+    cursor: pointer;
+}

@@ -10,6 +10,7 @@ from . import settings
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index, name='index'),
+    path('preview/', views.preview, name='preview'),
     path('camps/', include('camp.urls')),
     path('health/', include('health.urls')),
     path('tours/', include('tour.urls')),
