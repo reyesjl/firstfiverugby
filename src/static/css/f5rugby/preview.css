@@ -38,7 +38,6 @@
     min-height: 100px;
     box-shadow: 2.2px 4.5px 4.5px hsl(0deg 0% 0% / 0.43);
     text-decoration: none;
-    background: linear-gradient(90deg, black, #ff0000b0, black);
 }
 
 .featured-box.larger {
