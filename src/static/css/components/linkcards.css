@@ -1,0 +1,46 @@
+.services-wrapper {
+
+}
+
+.link.card {
+    display: block;
+    background: darkred;
+    min-height: 150px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: white;
+    border: 1px solid black;
+    position: relative;
+    transition: all .2s ease-in-out;
+}
+
+.link.card:hover {
+    background: white;
+    color: darkred;
+    transition: all .2s ease-in-out;
+}
+
+.card.title {
+    font-size: 1.1rem;
+    font-weight: normal;
+    padding: .75rem 2%;
+}
+
+.card.logo {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    font-size: 1.8rem;
+}
+
+.link.card.deactivated {
+    opacity: 50%;
+    user-select: none;
+}
+
+.light-text {
+    color: lightgray;
+    font-size: .8rem;
+    padding: 0 2%;
+    margin: 0;
+}
