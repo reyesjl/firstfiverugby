@@ -3,7 +3,6 @@ document.addEventListener("DOMContentLoaded", function() {
     var leftArrow = document.getElementById("leftArrow");
     var rightArrow = document.getElementById("rightArrow");
     var images = document.querySelectorAll(".carousel img");
-    var contentItems = document.querySelectorAll(".carousel-content");
     
     // Initialize current index
     var currentIndex = 0;
@@ -21,7 +20,6 @@ document.addEventListener("DOMContentLoaded", function() {
     function navigateCarousel(direction) {
         // Hide the current image
         images[currentIndex].classList.remove("show");
-        contentItems[currentIndex].classList.remove("show");
 
         // Update the current index based on the direction
         if (direction === "left") {
@@ -32,6 +30,5 @@ document.addEventListener("DOMContentLoaded", function() {
 
         // Show the next image
         images[currentIndex].classList.add("show");
-        contentItems[currentIndex].classList.add("show");
     }
 });

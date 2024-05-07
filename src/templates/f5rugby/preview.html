@@ -15,44 +15,20 @@
 {% block description %}Join the rugby community at First Five Rugby ( F5Rugby ) - your ultimate destination for all things rugby. Play rugby at local camps, participate in international tournaments, and get assistance from our recruiters. Access free resources including fitness plans and nutrition guides to optimize your training and performance. Explore our team services offering recruiting assistance and team tours. Shop our collection of team kits and customize apparel for games, travel, and honor caps. Start your rugby journey with F5Rugby today!{% endblock %}
 
 {% block content %}
-<div class="carousel">
-    <div class="carousel-overlay"></div>
-    <i id="leftArrow" class="carousel-arrow fa-solid fa-angle-left"></i>
-    <i id="rightArrow" class="carousel-arrow fa-solid fa-angle-right"></i>
-
-    <div class="container content-container">
-        <div class="carousel-content show">
-            <div class="row">
-                <div class="col-8">
-                    <h1 class="title">Rugby Camps</h1>
-                    <p class="detail">Top level coaching from The Cardiff Blues. Ireland's most successful academy coach Andy Skehan. Hundred of reps, daily prizes, and a free camp t-shirt. Learn to see the whole pitch.</p>
-                    <p><a class="button primary" href="#">Learn More</a></p>
-                </div>
-            </div>    
-        </div>
-        <div class="carousel-content">
-            <div class="row">
-                <div class="col-8">
-                    <h1 class="title">Ireland Team Tours</h1>
-                    <p class="detail">Every day is packed with rugby activities, historic tours, and team building opportunities. Watch pro matches and get a behind the scenes look, stay in walkable town centers and explore Ireland with our expert bus drivers.</p>
-                    <p><a class="button primary" href="#">Free Quote</a></p>
-                </div>
-            </div>    
-        </div>
-        <div class="carousel-content">
-            <div class="row">
-                <div class="col-8">
-                    <h1 class="title">Custom Team Kit</h1>
-                    <p class="detail">Create any design you can imagine! Customize the color, material, and even get player names on the back. Any sponsor sublimated on your teams jersey at no extra cost. Amazing prices.</p>
-                    <p><a class="button primary" href="#">Free Design</a></p>
-                </div>
-            </div>    
-        </div>
+<div class="carousel-wrapper">
+    <input type="radio" name="position" checked />
+    <input type="radio" name="position" />
+    <input type="radio" name="position" />
+    <input type="radio" name="position" />
+    <input type="radio" name="position" />
+    <div id="carousel">
+        <a href="1" class="item"><img src="{% static 'images/f5rugby/carousel/1.jpg' %}" alt="" /></a>
+        <a href="2" class="item"><img src="{% static 'images/f5rugby/carousel/2.jpg' %}" alt="" /></a>
+        <a href="3" class="item"><img src="{% static 'images/f5rugby/carousel/3.jpg' %}" alt="" /></a>
+        <a href="4" class="item"><img src="{% static 'images/f5rugby/carousel/4.jpg' %}" alt="" /></a>
+        <a href="5" class="item"><img src="{% static 'images/f5rugby/carousel/5.jpg' %}" alt="" /></a>
+        
     </div>
-
-    <img class="show" src="{% static 'images/camps/camps-bg2.jpg' %}" alt="first" />
-    <img src="{% static 'images/tours/tours-bg.jpg' %}" alt="second" />
-    <img src="{% static 'images/f5rugby/team-kit.jpg' %}" alt="third" />
 </div>
 <div class="container">
     <div class="section row">
