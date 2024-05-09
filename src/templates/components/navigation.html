@@ -1,58 +1,12 @@
-<!-- load the static tag -->
-{% load static %}
-
 <!-- templates/components/navigation.html -->
-<div class="nav-toggler-wrapper">
-    <div class="container">
-        <div class="row">
-            <div class="col-9-sm">
-                <div class="mobile-logo">
-                    <a class="navlink" href="{% url 'index' %}">
-                        <img width="100px" src="{% static 'images/f5rugby/firstfivelogo.png' %}" />
-                    </a>
-                </div>
-            </div>
-            <div class="col-3-sm">
-                <div id="menuToggle" class="menu-toggler text-white center">Menu</div>
-            </div>
-        </div>
-    </div>
+<div class="navmenu">
+    <a class="navlink" href="">Home</a>
+    <a class="navlink" href="">Camps</a>
+    <a class="navlink" href="">Tours</a>
+    <a class="navlink" href="">Health</a>
+    <a class="navlink" href="">Store</a>
 </div>
-<div id="menuWrapper" class="nav-wrapper">
-    <div class="container">
-        <div class="row">
-            <div class="col hidden-sm">
-                <ul class="navlist ubuntu-regular">
-                    <li class="navitem">
-                        <a class="navlink" href="{% url 'index' %}">
-                            <img width="100px" src="{% static 'images/f5rugby/firstfivelogo.png' %}" />
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            <div class="col-7">
-                <ul class="navlist ubuntu-regular">
-                    <li class="navitem"><a class="navlink" href="{% url 'index' %}">Home</a></li>
-                    <li class="navitem"><a class="navlink" href="{% url 'blog:index' %}">Blog</a></li>
-                    <li class="navitem"><a class="navlink" href="{% url 'camps:index' %}">Camps</a></li>
-                    <li><a class="navitem"><a class="navlink" href="{% url 'tour:index' %}">Tours</a></li>
-                    <li class="navitem"><a class="navlink" href="{% url 'health:index' %}">Health</a></li>
-                    <li class="navitem"><a class="navlink deactivated" href="#">Store</a></li>
-                </ul>
-            </div>
-            <div class="col">
-                <ul class="navlist justify-end ubuntu-regular right">
-                    {% if user.is_authenticated %}
-                        <li class="navitem right">
-                            <li class="navitem right"><a class="navlink" href="{% url 'accounts:dashboard' %}">{{ user.username }}</a></li>
-                        </li>
-                        <li class="navitem right"><a class="navlink" href="{% url 'accounts:logout' %}">Logout</a></li>
-                    {% else %}
-                        <li class="navitem right"><a class="navlink" href="{% url 'accounts:signup' %}">Sign Up</a></li>
-                        <li class="navitem right"><a class="navlink" href="{% url 'accounts:login' %}">Login</a></li>
-                    {% endif %}
-                </ul>
-            </div>
-        </div>
-    </div>
+
+<div class="navbar">
+    <span class="menulink">Menu</span>      
 </div>

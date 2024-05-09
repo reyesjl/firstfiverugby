@@ -22,8 +22,8 @@ body {
 /* ROOT FONT STYLES */
 
 * {
-  font-family: "Ubuntu", sans-serif;
   line-height: 1.2;
+  box-sizing: border-box;
 }
 
 /* TYPOGRAPHY */

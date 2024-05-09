@@ -1,73 +1,20 @@
-@import url(https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap);
-@import url(https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap);
-
-main {
-  padding-top: 50px;
-}
-
 body {
   margin: 0;
+  background: darkgreen;
+  background-image: url('http://127.0.0.1:8000/static/images/f5rugby/noise-light.png');
+  /* background-attachment: fixed; */
 }
 
-:root {
-  --spacing-multiplier: 1rem;
+.black-grain {
+  background: rgb(0, 0, 0);
+  background-image: url('http://127.0.0.1:8000/static/images/f5rugby/noise-light.png');
 }
 
-[class*="pt-"] {
-  padding-top: var(--spacing-multiplier);
+.white-grain {
+  background: whitesmoke;
+  background-image: url('http://127.0.0.1:8000/static/images/f5rugby/noise-light.png');
 }
 
-[class*="pb-"] {
-  padding-bottom: var(--spacing-multiplier);
-}
-
-.pt-2 {
-  padding-top: calc(var(--spacing-multiplier) * 2);
-}
-
-.pb-2 {
-  padding-bottom: calc(var(--spacing-multiplier) * 2);
-}
-
-.pt-3 {
-  padding-top: calc(var(--spacing-multiplier) * 3);
-}
-
-.pb-3 {
-  padding-bottom: calc(var(--spacing-multiplier) * 3);
-}
-
-.pt-4 {
-  padding-top: calc(var(--spacing-multiplier) * 4);
-}
-
-.pb-4 {
-  padding-bottom: calc(var(--spacing-multiplier) * 4);
-}
-
-.pt-5 {
-  padding-top: calc(var(--spacing-multiplier) * 5);
-}
-
-.pb-5 {
-  padding-bottom: calc(var(--spacing-multiplier) * 5);
-}
-
-.no-padding-top {
-  padding-top: 0;
-}
-
-.no-padding-bottom {
-  padding-top: 0;
-}
-
-.no-margin-top {
-  margin-top: 0;
-}
-
-.no-margin-bottom {
-  margin-bottom: 0;
-}
 
 /* Text colors */
 .text-white {
@@ -82,8 +29,8 @@ body {
   color: darkred;
 }
 
-.text-yellow {
-  color: darkgoldenrod;
+.text-orange {
+  color: #f8a20e;
 }
 
 .text-black {
@@ -102,51 +49,34 @@ body {
 }
 
 /* Sections */
-.section-strip {
+.subtitle {
+  font-size: 1em;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin: 0;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.section {
   padding: 2rem 0;
 }
 
-.p-strip {
-  padding: 2rem 0;
-}
-
-.section-strip-light {
-  background: #f7f7f7;
-} 
-
-.section-strip.light {
-  background: #f7f7f7;
-}
-
-.section-strip.dark {
-  background: #000000;
+.section.dark {
+  background: black;
 }
 
 .section-title {
+  font-family: 'Times New Roman Condensed', Times, serif;
   margin: 0;
+  font-size: 2.5rem;
 }
 
-.section-image-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-}
-
-.section-image {
-  padding-top: 2rem;
-}
-
-.section-image img {
-  width: 100%;
-}
-
-.subtitle {
-  font-size: 22px;
-}
-
-.height-full {
-  height: 80vh;
+.section-subtitle {
+  font-size: 1em;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin: 0;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 /* Buttons */
@@ -258,71 +188,7 @@ body {
   cursor: default; /* Change cursor to default */
 }
 
-/* Backgrounds */
-.red-background {
-    background-color: #772929;
-    background-image: linear-gradient(to bottom left, rgba(119, 41, 41, 0.16) 0, rgba(119, 41, 41, 0.16) 49.9%, transparent 50%), linear-gradient(to bottom right, rgba(228, 228, 228, 0.5) 0, rgba(228, 228, 228, 0.5) 49.9%, transparent 50%), linear-gradient(to top left, white 0%, white 49.3%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0) 100%), linear-gradient(-89deg, #e92020 0%, #772929 42%, #2c0000 94%);
-    background-blend-mode: multiply, multiply, normal, normal;
-    background-position: top right, top left, right bottom -1px, left top;
-    background-repeat: no-repeat;
-    background-size: 74% 99.83%, 68% 91%, 103.8% 20.26%, 100% 99.8%;
-}
-
-.red-right-background {
-    background-blend-mode: multiply, multiply, normal;
-    background-image: linear-gradient(150deg, rgba(228, 228, 228, 0.54) 0%, rgba(228, 228, 228, 0.54) 54.9%, rgba(228, 228, 228, 0) 55%, rgba(228, 228, 228, 0) 100%), linear-gradient(to bottom left, rgba(216, 216, 216, 0.54) 0%, rgba(216, 216, 216, 0.54) 49.9%, rgba(216, 216, 216, 0) 50%, rgba(216, 216, 216, 0) 100%), linear-gradient(-89deg, #e92020 0%, #772929 42%, #2c0000 94%);
-    background-position: bottom left, bottom 0 right, 0% 0%;
-    background-repeat: no-repeat;
-    background-size: 100% 100%, 60% 100%, auto;
-}
-
-.blue-right-background {
-    background-blend-mode: multiply, multiply, normal;
-    background-image: linear-gradient(150deg, rgba(228, 228, 228, 0.54) 0%, rgba(228, 228, 228, 0.54) 54.9%, rgba(228, 228, 228, 0) 55%, rgba(228, 228, 228, 0) 100%), linear-gradient(to bottom left, rgba(216, 216, 216, 0.54) 0%, rgba(216, 216, 216, 0.54) 49.9%, rgba(216, 216, 216, 0) 50%, rgba(216, 216, 216, 0) 100%), linear-gradient(-89deg, #202de9 0%, #292e77 42%, #00002c 94%);
-    background-position: bottom left, bottom 0 right, 0% 0%;
-    background-repeat: no-repeat;
-    background-size: 100% 100%, 60% 100%, auto;
-}
-
-.green-right-background {
-    background-blend-mode: multiply, multiply, normal;
-    background-image: linear-gradient(150deg, rgba(228, 228, 228, 0.54) 0%, rgba(228, 228, 228, 0.54) 54.9%, rgba(228, 228, 228, 0) 55%, rgba(228, 228, 228, 0) 100%), linear-gradient(to bottom left, rgba(216, 216, 216, 0.54) 0%, rgba(216, 216, 216, 0.54) 49.9%, rgba(216, 216, 216, 0) 50%, rgba(216, 216, 216, 0) 100%), linear-gradient(-89deg, #3ee920 0%, #29772c 42%, #072c00 94%);
-    background-position: bottom left, bottom 0 right, 0% 0%;
-    background-repeat: no-repeat;
-    background-size: 100% 100%, 60% 100%, auto;
-}
-
-.ireland-background {
-    background-image: url('/static/images/tours/tours-bg.jpg');
-    background-size: cover; /* Adjust as needed */
-    background-position: center; /* Adjust as needed */
-}
-
-.camps-background {
-    background-image: url('/static/images/camps/camps-bg2.jpg');
-    background-size: cover; /* Adjust as needed */
-    background-position: center; /* Adjust as needed */
-}
-
-.health-background {
-    background-image: url('/static/images/health/health-bg.jpg');
-    background-size: cover; /* Adjust as needed */
-    background-position: center; /* Adjust as needed */
-}
-
-.blog-background {
-    background-image: url('/static/images/blog/blog-bg.jpg');
-    background-size: cover; /* Adjust as needed */
-    background-position: center; /* Adjust as needed */
-}
-
 /* Fonts*/
-.archivo {
-  font-family: "Archivo Black", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
 .ubuntu-light {
   font-family: "Ubuntu", sans-serif;
   font-weight: 300;

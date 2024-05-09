@@ -1,0 +1,141 @@
+.slider-wrapper {
+  padding: 2rem 0;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  position: relative;
+  height: 475px;
+  display: flex;
+  align-items: center;
+}
+
+.slider-controls {
+  display: flex;   
+  align-items: center;
+  justify-content: end; 
+}
+
+.slider-button {
+  color: white;
+  padding: 1rem;
+  margin-right: 1rem;
+  background: rgba(255, 255, 255, 0.192);
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+
+.slider-button:hover {
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.492);
+}
+
+.slider-button.for-light {
+   background: rgba(0, 0, 0, 0.192);
+}
+
+.slider-button.for-light:hover {
+   background: rgba(0, 0, 0, 0.492);
+}
+
+.slider {
+  display: flex;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  position: absolute;
+  left: 20%;
+}
+
+.slider-card {
+  background: rgba(255, 255, 255, 0.192);
+  backdrop-filter: blur(10px);
+  height: 400px;
+  width: 300px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 12px;
+  flex: 0 0 auto;
+  scroll-snap-align: center;
+  margin-right: 2rem;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  transition: all;
+  transition-duration: .3s;
+}
+
+.slider-card.dark {
+  background: rgba(0, 0, 0, 0.992);
+  backdrop-filter: blur(10px);
+  color: white;
+}
+
+.slider-card.light {
+  background: rgba(255, 255, 255, 0.192);
+  backdrop-filter: blur(10px);
+  color: black;
+}
+
+.slider-card:hover {
+  transition: all;
+  transition-duration: .5s;
+  box-shadow: rgba(0, 0, 0, 0.569) 0px 10px 10px;
+}
+
+.slider-card.invisible {
+  background: none;
+  backdrop-filter: none;
+  box-shadow: none;
+  user-select: none;
+  cursor: default;
+}
+
+.card-header {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 50%;
+  z-index: 10;
+}
+
+.card-topic {
+  font-size: .8rem;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.card-title {
+  display: flex;
+  align-items: center;
+  font-size: 1.8rem;
+  max-width: 90%;
+  line-height: 1.5rem;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.card-desc {
+  font-size: 1rem;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.card-img img {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  z-index: 1;
+}
+
+/* Hide the scrollbar track and scrollbar buttons */
+.slider-wrapper::-webkit-scrollbar {
+  width: 5px; /* Width of the scrollbar */
+  display: none;
+}

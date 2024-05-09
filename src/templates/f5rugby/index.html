@@ -6,6 +6,7 @@
 {% load static %}
 {% block css %}
     <link rel="stylesheet" href="{% static 'css/f5rugby/index.css' %}">
+    <link rel="stylesheet" href="{% static 'css/components/slider.css' %}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 {% endblock %}
 
@@ -15,21 +16,192 @@
 {% block content %}
 <div class="jumbotron">
     <div class="container">
-        <div class="jumbotron-content">
-            <div class="row center">
-                <div class="col-12">
-                    <h1 class="jumbo-title">First Five</h1>
-                    <p class="subtitle text-white">The premier destination to grow the game of rugby.</p>
-                </div>
+        <h1 class="title center text-white">FIRST FIVE RUGBY</h1>
+        <p class="subtitle center text-white">The premier destination to grow the game</p>
+    </div>
+</div>
+<div class="section white-grain">
+    <div class="container">
+        <div class="row">
+            <div class="col-10 col-12-sm"> 
+                <h1 class="section-title text-black">Featured Services</h1>
+                <p class="section-subtitle text-black">Our mission is to provide resources for the rugby community.</p>
             </div>
-            <div class="row">
-                <div class="col-3 center"><a class="action-link" href="{% static 'images/f5rugby/free-team-kit.jpg' %}">Free Team Kit</a></div>
-                <div class="col-3 center"><a class="action-link" href="{% url 'camps:index' %}">Rugby Camps</a></div>
-                <div class="col-3 center"><a class="action-link" href="{% url 'tour:index' %}">Ireland Tours</a></div>
-                <div class="col-3 center"><a class="action-link" href="{% url 'health:index' %}">Health Plans</a></div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="slider-controls">
+                    <div class="slider-button for-light slider-left">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </div>
+                    <div class="slider-button for-light slider-right">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-    <img class="image-bg" src="{% static 'images/f5rugby/jumbo-bg.jpg' %}" />
+    <div class="slider-wrapper">
+        <div class="slider">
+            <a href="#" class="slider-card dark">
+                <div class="card-header">
+                    <div class="card-topic">Rugby camps</div>
+                    <div class="card-title">Cardiff Blues in Town!</div>
+                    <div class="card-desc">From ages 8 to 18. For players and for coaches. Starting at $50 to $325 for multi-day camps.</div>
+                </div>
+                <div class="card-img"><img src="{% static 'images/f5rugby/slider/1.png' %}" /></div>
+            </a>
+            <a href="#" class="slider-card light">
+                <div class="card-header">
+                    <div class="card-topic">Team tours</div>
+                    <div class="card-title">Ireland Team Tour</div>
+                    <div class="card-desc">Everyday includes history, rugby, and team building at amazing prices!</div>
+                </div>
+                <div class="card-img"><img src="{% static 'images/f5rugby/slider/2.png' %}" /></div>
+            </a>
+            <a href="#" class="slider-card light">
+                <div class="card-header">
+                    <div class="card-topic">Team Kit</div>
+                    <div class="card-title">Full Custom Kit</div>
+                    <div class="card-desc">Any design you can imagine. Custom colors & player names on jersey. Get a free design.</div>
+                </div>
+                <div class="card-img"><img src="{% static 'images/f5rugby/slider/3.png' %}" /></div>
+            </a>
+            <a href="#" class="slider-card dark">
+                <div class="card-header">
+                    <div class="card-topic">Health</div>
+                    <div class="card-title">Free Fitness Plan</div>
+                    <div class="card-desc">Weekly workouts. Certified trainers. We evalutate your current plan for free!</div>
+                </div>
+                <div class="card-img"><img src="{% static 'images/f5rugby/slider/4.png' %}" /></div>
+            </a>
+            <a href="#" class="slider-card light">
+                <div class="card-header">
+                    <div class="card-topic">Retro Jersey</div>
+                    <div class="card-title">One of a Kind</div>
+                    <div class="card-desc">Awesome rugby jerseys. Signed, limited, and vintage!</div>
+                </div>
+                <div class="card-img"><img src="{% static 'images/f5rugby/slider/5.png' %}" /></div>
+            </a>
+            <a href="#" class="slider-card light">
+                <div class="card-header">
+                    <div class="card-topic">Custom team caps</div>
+                    <div class="card-title">Honor Caps</div>
+                    <div class="card-desc">Starting at $20 per cap! Customize trim, base, and club crest!</div>
+                </div>
+                <div class="card-img"><img src="{% static 'images/f5rugby/slider/6.png' %}" /></div>
+            </a>
+            <div class="slider-card invisible"></div>
+        </div>
+    </div>
 </div>
+<div class="section black-grain">
+    <div class="container">
+        <div class="row">
+            <div class="col-10 col-12-sm"> 
+                <h1 class="section-title text-white">About Us.</h1>
+                <p class="section-subtitle text-white">We couldn't find a community rugby platform, so we created one.</p>
+            </div>
+        </div>
+        <div class="row row-spacer">
+            <div class="col-6">
+                <img class="gif" src="https://media.giphy.com/media/t6wYEB5ShNVqHuDRPp/giphy.gif" />
+            </div>
+            <div class="col-6">
+                <div class="section-inner">
+                    <h2 class="inner-title text-white">Built by Rugby Players.</h2>
+                    <p class="inner-desc text-white">We envisioned a singular platform where players could access tailored fitness plans, discover local clubs for participation, and where parents could effortlessly explore upcoming rugby camps nearby.</p>
+                    <p class="inner-desc text-white">A dynamic platform to share true rugby culture, while benefiting the community.</p>
+                </div>
+            </div>
+        </div>        
+    </div>
+</div>
+<div class="section white-grain">
+    <div class="container">
+        <div class="row">
+            <div class="col-10 col-12-sm"> 
+                <h1 class="section-title">Discover More.</h1>
+                <p class="section-subtitle">We are involved at ground level.</p>
+            </div>
+        </div>
+        <div class="row row-spacer">
+            <div class="col-6">
+                <div class="section-inner">
+                    <h2 class="inner-title">World Class Camps</h2>
+                    <ul class="feature-list">
+                        <li class="feature-item">Top Level coaches fly in for camps.</li>
+                        <li class="feature-item">Room and Board is provided for all players.</li>
+                        <li class="feature-item">Hundred of reps and direct feedback.</li>
+                        <li class="feature-item">Learn to see the entire pitch.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="section-inner">
+                    <h2 class="inner-title">Custom Kits</h2>
+                    <ul class="feature-list">
+                        <li class="feature-item">We provide free designs for any team.</li>
+                        <li class="feature-item">The best price of any brand on the market.</li>
+                        <li class="feature-item">Customize the jersey with player names.</li>
+                        <li class="feature-item">Any number of sponsors sublimated on jersey.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>        
+    </div>
+</div>
+<div class="section">
+    <div class="container">
+        <div class="row">
+            <div class="col-10 col-12-sm"> 
+                <h1 class="section-title text-orange">Ireland Team Tours.</h1>
+                <p class="section-subtitle text-white">At an unbeatable price.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <img class="gif" src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExbnptaWsxcmFiNzZ2bW00YXFkamRoM2JraTd1ZHJ2N3o0MHd5dzRkZyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/621K2vwimar10K9LHL/giphy.gif" />
+            </div>
+            <div class="col-6">
+                <div class="section-inner">
+                <h2 class="inner-title text-white">What You Get!</h2>
+                    <ul class="feature-list text-white">
+                        <li class="feature-item light">Advanced rugby learning everyday - past tours have included training with Connacht, Munster, and Leinster coaches.</li>
+                        <li class="feature-item light">Learning Irish history each day of tour - we work historical stops into the daily schedule that are fun and educational.</li>
+                        <li class="feature-item light">Daily opportunities for team building - we do everything from group training to a mud obstacle course in the irish bog.</li>
+                        <li class="feature-item light">Exclusive access at professional rugby games.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>        
+    </div>
+</div>
+<div class="section white-grain">
+    <div class="container">
+        <div class="row">
+            <div class="col-10 col-12-sm"> 
+                <h1 class="section-title">Health Access.</h1>
+                <p class="section-subtitle">Everything you need to get faster, stronger, or just feel better.</p>
+            </div>
+        </div>
+        <div class="row row-spacer">
+            <div class="col-6">
+                <div class="section-inner">
+                    <h2 class="inner-title">Certified Trainers</h2>
+                    <ul class="feature-list">
+                        <li class="feature-item">We create tailored plans for rugby player and individuals.</li>
+                        <li class="feature-item">Follow along with our free plans and progress week to week.</li>
+                        <li class="feature-item">Get a free evaluation by submitting your current plan.</li>
+                        <li class="feature-item">Book a 1-on-1 with an expert for a custom plan.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>        
+    </div>
+</div>
+
+{% endblock %}
+{% block js %}
+<script src="{% static 'js/components/slider.js' %}"></script>
 {% endblock %}

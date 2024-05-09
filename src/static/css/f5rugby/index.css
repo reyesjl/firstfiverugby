@@ -1,185 +1,63 @@
-.hero-wrapper {
-    padding: 6rem 0 4rem 0;
-}
-
-.section-jumbo {
-    background: rgba(0, 0, 0, 0.6);
-    overflow: hidden;
-    min-height: 100vh;
-    position: relative;
-}
-
-.sub-jumbo-title {
-    background-color: darkred;
-    padding: 20px;
-    color: white;
-    margin: 0;
-    width: fit-content;
+@font-face {
+    font-family: "Times New Roman Condensed";
+    src: url("http://127.0.0.1:8000/static/fonts/times-condensed.otf") format("opentype");
 }
 
 .jumbotron {
+    padding-top: 50px;
+    height: 60vh;
     display: flex;
     align-items: center;
-    justify-content: center;
-    background: rgba(0, 0, 0, 0.5);
-    overflow: hidden;
-    min-height: 100vh;
-    position: relative;
 }
 
-.jumbo-content {
-    z-index: 1;
+.jumbotron .title {
     color: white;
-}
-
-.jumbo-title {
+    font-family: 'Times New Roman Condensed', Times, serif;
     margin: 0;
-    font-size: 3.5em;
-    letter-spacing: .3em;
-    text-transform: uppercase;
-    color: white;
+    font-size: 2.5rem;
 }
 
-.jumbo-button {
-    padding: 10px 20px;
-    margin-top: 3rem;
-    color: black;
-    background: white;
-    border-radius: 20px;
-    text-decoration: none;
-}
-
-.action-list {
-    list-style-type: none;
-    margin: 2rem 0;
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-    text-align: center;
-}
-
-.action-link {
-    display: block;
-    width: 80%;
-    padding: 20px 30px;
-    background: white;
-    text-decoration: none;
-    color: black;
-    border-radius: 8px;
-    font-weight: bold;
-    transition: all;
-    transition-duration: .3s;
-    margin: 0 auto;
-    text-transform: uppercase;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
-
-.action-link:hover {
-    color: white;
-    background: black;
-    transition: all;
-    transition-duration: .3s;
-}
-
-.action-link.deactivated {
-    opacity: 50%;
-    pointer-events: none;
-}
-
-.smaller-title {
-    font-size: 2.7em;
-    margin: 0;
-}
-
-.video-bg {
-    position: absolute;
-    min-width: 100%;
-    min-height: 100%;
-    top: 0;
-    left: 0;
-    z-index: -1;
-}
-
-.image-bg {
-    position: absolute;
-    min-width: 100%;
-    min-height: 100%;
-    top: 0;
-    text-align: center;
-    z-index: -1;
-}
-
-.hero-solid-content {
-    padding: 15px;
-    margin: 5vh 0;
-    background-color: rgba(0, 0, 0, 0.8);
-}
-
-.hero {
-    color: white;
-}
-
-.hero-title {
-    color: white;
-    margin: 0;
-    font-size: 2rem;
-}
-
-.hero-subtitle {
-    font-size: 1.5rem;
-    color: white;
-}
-
-.strip-notice {
-    margin-top: 20px;
-}
-
-.notification {
-    border: 1px solid rgba(0, 0, 0, 0.5);
-    border-left: 4px solid #24598f;
-    padding: 0 10px;
-}
-
-.notification-title {
-    color: darkred;
-    font-weight: 400;
-}
-
-.logo-section {
+.row-spacer {
     padding: 1rem 0;
 }
 
-.content-spacer {
-    min-height: 80vh;
+.inner-title {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-.errorlist {
+.inner-desc {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.gif {
+    width: 100%;
+    border-radius: 12px;
+}
+
+.feature-list {
     margin: 0;
+    padding: 0;
+    list-style-type: none;
 }
 
-.errorlist li {
-    color: darkred;
+.feature-list li:last-child {
+    border-bottom: 2px solid black;
 }
 
-@media only screen and (max-width: 600px) {
-    .logo-section {
-        line-height: 0;
-        padding-bottom: .5rem;
-        padding-top: .5rem;
-    }
-    
-    .logo-item {
-        display: inline-block;
-        height: 64px;
-    }
-
-    .sub-jumbo-title {
-        font-size: 1.4rem;
-        margin: 0 auto;
-    }
-
-    .action-link {
-        padding: 10px 20px;
-    }
+.feature-item {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border-top: 2px solid black;
+    padding: 1rem 0;
 }
 
+.feature-item.light {
+    border-top: 2px solid white;
+}
+
+.feature-list li.light:last-child {
+    border-bottom: 2px solid white;
+}
+
+@media only screen and (max-width: 600px) { 
+
+}

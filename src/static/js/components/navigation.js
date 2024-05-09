@@ -1,15 +1,18 @@
 document.addEventListener('DOMContentLoaded', function() {
-    var menuToggle = document.getElementById('menuToggle');
-    var menuWrapper = document.getElementById('menuWrapper');
+    // Get references to the navmenu and menulink elements
+    const navmenu = document.querySelector('.navmenu');
+    const menulink = document.querySelector('.menulink');
+    const body = document.querySelector('body');
 
-    menuToggle.addEventListener('click', function() {
-        menuWrapper.classList.toggle('show-menu');
-        if (menuWrapper.classList.contains('show-menu')) {
-            menuToggle.textContent = 'Close';
-            document.body.classList.add('disable-scroll');
+    // Add click event listener to menulink
+    menulink.addEventListener('click', function() {
+        if (menulink.textContent === 'Menu') {
+            menulink.textContent = 'Close';
         } else {
-            menuToggle.textContent = 'Menu';
-            document.body.classList.remove('disable-scroll');
+            menulink.textContent = 'Menu';
         }
+        menulink.classList.toggle('is-red');
+        navmenu.classList.toggle('show');
+        body.classList.toggle('body-scroll-lock');
     });
 });
