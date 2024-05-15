@@ -7,7 +7,7 @@
 {% block css %}
     <link rel="stylesheet" href="{% static 'css/f5rugby/index.css' %}">
     <link rel="stylesheet" href="{% static 'css/camps/index.css' %}">
-    <link rel="stylesheet" href="{% static 'css/components/cards.css' %}">
+    <link rel="stylesheet" href="{% static 'css/components/slider.css' %}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 {% endblock %}
 
@@ -15,236 +15,40 @@
 {% block description %}Join our rugby camps for a comprehensive approach to personal player development and engaging group/team activities. Led by experienced coach Andy Skehan, our camps cater to both newcomers and seasoned players, offering expert guidance and a supportive environment to hone your skills and passion for rugby. Sign up now for an unforgettable experience on and off the field!{% endblock %}
 
 {% block content %}
-<div class="hero-wrapper camps-background">
-    <div class="hero container">
-        <div class="row">
-            <div class="col-8">
-                <div class="hero-solid-content">
-                    <h1 class="hero-title ubuntu-regular">Cardiff Blues All Star Rugby Camp</h1>
-                    <p class="ubuntu-light text-white">Not your average <a class="link underlined text-white" href="#staff">camp staff!</a> 3 full time Rugby Coaches with pro experience. Hundreds of reps with skill progression. Focus on seeing the entire pitch. Daily Prizes.</p>
-                    <p><a class="button primary" href="https://www.youtube.com/watch?v=-StEo77xtuY">Camp Video</a></p>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="section-strip camps-wrapper">
+<div class="section white-grain">
     <div class="container">
         <div class="row">
-            <h1 class="section-title ubuntu-light">Upcoming camps</h1>
-            <div class="camps-container pt-1">
-                {% for camp in camps %}
-                <div class="col-3">
-                    <div class="card-post">
-                        <header class="card-header">
-                            <h5 class="muted-heading">{{ camp.tags }}</h5>
-                        </header>
-                        <div class="card-content">
-                            <h3 class="no-margin-top no-margin-bottom"><a class="link-soft underlined" href="{% url 'camps:details' camp.id %}">{{ camp.title }}</a></h3>
-                            <p>{{ camp.description }}</p>
-                        </div>
-                        <div class="card-image pb-1 center">
-                            {% if camp.crest %}<img src="{{ camp.crest.url }}" alt="{{ camp.title }} Crest">{% endif %}
-                        </div>
-                        <div class="card-footer">
-                            <p class="no-margin-bottom no-margin-top">Date: {{ camp.start_date|date:"F j" }} - {{ camp.end_date|date:"j" }}</p>
-                        </div>
-                    </div>
-                </div>
-                {% empty %}
-                <div class="col-4">
-                    <div class="card-post">
-                        <header class="card-header">
-                            <h5 class="muted-heading">Empty</h5>
-                        </header>
-                        <div class="card-content">
-                            <h3 class="no-margin-top no-margin-bottom"><a class="link-soft underlined" href="">No Camps.</a></h3>
-                            <p>Come back soon, no camps have been added yet.</p>
-                        </div>
-                        <div class="card-footer">
-                            <p class="no-margin-bottom no-margin-top">Coming soon.</p>
-                        </div>
-                    </div>
-                </div>
-                {% endfor %}
+            <div class="col-10 col-12-sm"> 
+                <h1 class="section-title text-black">Rugby Camps</h1>
+                <p class="section-subtitle text-black">Growing rugby & identifying talent across the USA. All ages & skill levels.</p>
             </div>
         </div>
-    </div>
-</div>
-<div id="staff" class="section-strip light">
-    <div class="container">
-        <div class="row pt-1">
-            <div class="col-12 center">
-                <p>Explore the staff profiles.</p>
-                <div class="tabs justify-between">
-                    <button class="button primary tab-back">Back</button>
-                    <button class="button primary tab-next">Next</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div id="1" class="section-strip light tab-content active staff-wrapper">
-        <div class="container">
-            <div class="row">
-                <div class="col-5">
-                    <div class="section-image-wrapper">
-                        <div class="section-image">
-                            <!-- Replace the image source with the appropriate image URL -->
-                            <img alt="Dai Rees" src="{% static 'images/camps/staff/dai-rees.png' %}">
-                        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="slider-controls">
+                    <div class="slider-button for-light slider-left">
+                        <i class="fa-solid fa-chevron-left"></i>
                     </div>
-                </div>
-                <div class="col-7">
-                    <h1 class="section-title ubuntu-light">Dai Rees</h1>
-                    <p class="subtitle">Read more about <a class="link dark" href="https://www.scmp.com/sport/rugby/article/3078654/veteran-coach-dai-rees-leave-hong-kong-rugby-union-after-more-decades">Coach Dai Rees.</a></p>
-                    <ul class="section-strip inline-list">
-                        <li class="inline-list-item"><i class="fa-regular fa-circle-check"></i> Dai is a level 4 coach and former head coach of Wales u20.</li>
-                        <li class="inline-list-item"><i class="fa-regular fa-circle-check"></i> Longtime Director of Rugby at the Hong Kong Rugby Union.</li>
-                        <li class="inline-list-item"><i class="fa-regular fa-circle-check"></i> Head of Academy at the Dragons in Wales.</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div id="2" class="section-strip light tab-content staff-wrapper">
-        <div class="container">
-            <div class="row">
-                <div class="col-5 hidden-lg">
-                    <div class="section-image-wrapper">
-                        <div class="section-image">
-                            <img alt="Andy Skehan" src="{% static 'images/camps/staff/skehan.png' %}">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-7">
-                    <h1 class="section-title ubuntu-light">Andy Skehan</h1>
-                    <p class="subtitle">Read what <a class="link dark" href="https://f5rugby.com/static/images/camps/james-ryan-quote.png">Ireland's James Ryan</a> had to say about Coach Andy Skehan.</p>
-                    <p>Read about Andy coaching kids from <a class="link dark" href="https://www.the42.ie/andy-skehan-st-michaels-brazil-5850145-Aug2022/?utm_source=shortlink&fbclid=IwZXh0bgNhZW0CMTAAAR0cCtZpjz5fPaD8NSGZzw4yfUe9Lcx7AHEH1vxalhqtVFpEzvDI6HO2dtw_aem_AbRFihfA0FA7qryiKFogPe2bHyb4hdOORjFQwfxRcFbbIN7qtoaHu87aqoh0in1HG-g_I-NHYyRIa3qUsy_Vl8ro ">Brazil's favelas.</a></p>
-
-                    <ul class="section-strip inline-list">
-                        <li class="inline-list-item"><i class="fa-regular fa-circle-check"></i> Has coached and served as director of rugby for St Michael's College - producing more pro players than any other program in the world.</li>
-                        <li class="inline-list-item"><i class="fa-regular fa-circle-check"></i> In addition to St Michael's, also coaches with Terenure's AIL side with his brother Sean.</li>
-                        <li class="inline-list-item"><i class="fa-regular fa-circle-check"></i> Served as high performance consultant for the Brazil Rugby Union, consulted with Old Glory and also served successful tenure as Leinster's u18 coach for multiple seasons.</li>
-                    </ul>
-                </div>
-                <div class="col-5 hidden-sm">
-                    <div class="section-image-wrapper">
-                        <div class="section-image">
-                            <img alt="Andy Skehan" src="{% static 'images/camps/staff/skehan.png' %}">
-                        </div>
+                    <div class="slider-button for-light slider-right">
+                        <i class="fa-solid fa-chevron-right"></i>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div id="3" class="section-strip light tab-content active staff-wrapper">
-        <div class="container">
-            <div class="row">
-                <div class="col-5">
-                    <div class="section-image-wrapper">
-                        <div class="section-image">
-                            <!-- Replace the image source with the appropriate image URL -->
-                            <img alt="Tim Brown" src="{% static 'images/camps/staff/timbo.png' %}">
-                        </div>
-                    </div>
+    <div class="slider-wrapper">
+        <div class="slider">
+            {% for camp in camps %}
+            <a href="#" class="slider-card light">
+                <div class="card-header">
+                    <div class="card-topic">{{ camp.start_date|date:"F j" }}</div>
+                    <div class="card-title">{{ camp.title }} camp</div>
+                    <div class="card-desc">{{ camp.description }}</div>
                 </div>
-                <div class="col-7">
-                    <h1 class="section-title ubuntu-light">Tim Brown</h1>
-                    <p class="subtitle">Pro Rugby Consultant.</p>
-                    <p>Read about how Tim captured The Beast, <a class="link dark" href="https://www.goffrugbyreport.com/news/how-listening-got-old-glory-dc-land-beast">Tendai Mtawarira</a>!</p>
-
-                    <ul class="section-strip inline-list">
-                        <li class="inline-list-item"><i class="fa-regular fa-circle-check"></i> Tim has been involved in rugby on national and international levels for almost 30 years.</li>
-                        <li class="inline-list-item"><i class="fa-regular fa-circle-check"></i> Played as a collegiate All Amercian as well as for the U23s, played un US Super League, managed University Rugby from club through varsity.</li>
-                        <li class="inline-list-item"><i class="fa-regular fa-circle-check"></i> First official employee of for Old Glory DC - running what was widely recognized as the best run MLR Academy.</li>
-                        <li class="inline-list-item"><i class="fa-regular fa-circle-check"></i> Now working for World Rugby Shop and UMW with Rugby East as well as consulting with Pro 14, Premiership, and MLR teams.</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div id="4" class="section-strip light tab-content staff-wrapper">
-        <div class="container">
-            <div class="row">
-                <div class="col-5 hidden-lg">
-                    <div class="section-image-wrapper">
-                        <div class="section-image">
-                            <img alt="Joseph Ritter" src="{% static 'images/camps/staff/ritter.png' %}">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-7">
-                    <h1 class="section-title ubuntu-light">Joseph Ritter</h1>
-                    <p class="subtitle">Pathways Coach</p>
-                    <p>Listen to Joseph's <a class="link dark" href="https://scholar.umw.edu/rcd/133/">Capstone Project</a> on the emerging sport of Rugby.</p>
-                    <ul class="section-strip inline-list">
-                        <li class="inline-list-item"><i class="fa-regular fa-circle-check"></i> Attended the Crusaders International Academy in New Zealand with Grant Keenan.</li>
-                        <li class="inline-list-item"><i class="fa-regular fa-circle-check"></i> Was part of the pathways program and represented Old Glory's academy side.</li>
-                        <li class="inline-list-item"><i class="fa-regular fa-circle-check"></i> Coached Fort Hunt's u19 side and contributed on and off the pitch with player development.</li>
-                        <li class="inline-list-item"><i class="fa-regular fa-circle-check"></i> President of his university Rugby Team and is an active member of the Alumni Association.</li>
-                    </ul>
-                </div>
-                <div class="col-5 hidden-sm">
-                    <div class="section-image-wrapper">
-                        <div class="section-image">
-                            <img alt="Joseph Ritter" src="{% static 'images/camps/staff/ritter.png' %}">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div id="5" class="section-strip light tab-content active staff-wrapper">
-        <div class="container">
-            <div class="row">
-                <div class="col-5">
-                    <div class="section-image-wrapper">
-                        <div class="section-image">
-                            <!-- Replace the image source with the appropriate image URL -->
-                            <img alt="Kit Waddington" src="{% static 'images/camps/staff/kit2.png' %}">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-7">
-                    <h1 class="section-title ubuntu-light">Kit Waddington</h1>
-                    <p class="subtitle">Leinster Academy Player</p>
-                    <p>Veteran of Leinster Academy. Currently playing in USA Rugby East Competition. Plays scrumhalf and looking forward to a successful senior year.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div id="6" class="section-strip light tab-content staff-wrapper">
-        <div class="container">
-            <div class="row">
-                <div class="col-5 hidden-lg">
-                    <div class="section-image-wrapper">
-                        <div class="section-image">
-                            <img alt="Jose Reyes" src="{% static 'images/camps/staff/reyes.png' %}">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-7">
-                    <h1 class="section-title ubuntu-light">Jose Reyes</h1>
-                    <p class="subtitle">Pathways Player. Listen to <a class="link dark" href="https://youtube.com/clip/UgkxauZzjwEXtWxSy_ZcVgJ2wDcwPR1MiQSW?si=HS3LKsydcwJ_XnnC">Tim say nice</a> things.</p>
-                    <p>Jose played 4 years of Varsity Rugby at Mary Washington.</p>
-
-                    <ul class="section-strip inline-list">
-                        <li class="inline-list-item"><i class="fa-regular fa-circle-check"></i> Played in the ARP with White Plains Warthogs.</li>
-                        <li class="inline-list-item"><i class="fa-regular fa-circle-check"></i> Was part of Old Glory's Academy coming through their pathways program and got signed to the team during their 2023 run.</li>
-                        <li class="inline-list-item"><i class="fa-regular fa-circle-check"></i> Jose plays touch rugby and coaches youth rugby at various clubs during his off-time.</li>
-                    </ul>
-                </div>
-                <div class="col-5 hidden-sm">
-                    <div class="section-image-wrapper">
-                        <div class="section-image">
-                            <img alt="Jose Reyes" src="{% static 'images/camps/staff/reyes.png' %}">
-                        </div>
-                    </div>
-                </div>
-            </div>
+                <div class="card-img"><img src="{{ camp.crest.url }}" /></div>
+            </a>
+            {% endfor %}
+            <div class="slider-card invisible"></div>
         </div>
     </div>
 </div>
@@ -253,4 +57,5 @@
 <!-- Custom JavaScript tags -->
 {% block js %}
 <script src="{% static 'js/camps/index.js' %}"></script>
+<script src="{% static 'js/components/slider.js' %}"></script>
 {% endblock %}

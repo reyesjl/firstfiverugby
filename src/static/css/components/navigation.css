@@ -45,7 +45,7 @@
 }
 
 .menulink {
-    color: rgb(77, 77, 77);
+    color: black;
     text-transform: uppercase;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: bold;
@@ -56,10 +56,10 @@
     cursor: pointer;
     user-select: none;
     padding: .5rem .75rem;
-    background: rgba(255, 255, 255, 0.515);
+    background: white;
     border-radius: 20px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    border: 1px solid silver;
+    border: 1px solid black;
 }
 
 .is-red {

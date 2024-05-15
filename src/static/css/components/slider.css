@@ -74,7 +74,7 @@
 }
 
 .slider-card.light {
-  background: rgba(255, 255, 255, 0.192);
+  background: rgba(255, 255, 255, 0.992);
   backdrop-filter: blur(10px);
   color: black;
 }

@@ -11,7 +11,7 @@ body {
 }
 
 .white-grain {
-  background: whitesmoke;
+  background: white;
   background-image: url('http://127.0.0.1:8000/static/images/f5rugby/noise-light.png');
 }
 

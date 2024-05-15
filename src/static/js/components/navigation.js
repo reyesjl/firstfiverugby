@@ -6,10 +6,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Add click event listener to menulink
     menulink.addEventListener('click', function() {
-        if (menulink.textContent === 'Menu') {
+        if (menulink.textContent === 'Try') {
             menulink.textContent = 'Close';
         } else {
-            menulink.textContent = 'Menu';
+            menulink.textContent = 'Try';
         }
         menulink.classList.toggle('is-red');
         navmenu.classList.toggle('show');
